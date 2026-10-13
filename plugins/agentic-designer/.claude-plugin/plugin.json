@@ -1,0 +1,17 @@
+{
+  "name": "agentic-designer",
+  "version": "1.0.0",
+  "description": "A product design studio as Claude Code agents: Jarvis (designs, builds and polishes in Figma for every industry, style and device incl. foldables), Fresh Eyes critic, Pandu (prototypes, motion, Lottie), Desi (design systems, brand modes), Pram (PRDs & research), Wulan (copy & localization), Dev (engineering), Sari (learning). Stored design-system knowledge, tested Figma helpers, lint, 3D office.",
+  "author": {
+    "name": "Reyhan Adinata Kurniawan"
+  },
+  "keywords": [
+    "design",
+    "figma",
+    "product-design",
+    "ui-ux",
+    "design-system",
+    "agents"
+  ],
+  "license": "MIT"
+}

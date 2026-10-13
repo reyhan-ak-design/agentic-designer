@@ -1,0 +1,14 @@
+{
+  "name": "agentic-designer-marketplace",
+  "owner": {
+    "name": "Reyhan Adinata Kurniawan"
+  },
+  "plugins": [
+    {
+      "name": "agentic-designer",
+      "source": "./plugins/agentic-designer",
+      "description": "Agentic Designer \u2014 a full product design team in Claude Code, working in Figma.",
+      "version": "1.0.0"
+    }
+  ]
+}

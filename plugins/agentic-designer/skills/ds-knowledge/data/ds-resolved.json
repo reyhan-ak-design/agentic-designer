@@ -1,0 +1,1440 @@
+{
+ "base": "Base",
+ "source": "demo design system (fictional) \u2014 replace with /add-ds",
+ "semantic_alias": {
+  "surface/primary": [
+   "neutral/0",
+   "neutral/1000"
+  ],
+  "surface/secondary": [
+   "neutral/50",
+   "neutral/800"
+  ],
+  "surface/tertiary": [
+   "neutral/100",
+   "neutral/700"
+  ],
+  "surface/disabled": [
+   "neutral/200",
+   "neutral/600"
+  ],
+  "surface/inverse": [
+   "neutral/1000",
+   "neutral/0"
+  ],
+  "surface/on-color": [
+   "neutral/0",
+   "neutral/0"
+  ],
+  "surface/elevated": [
+   "neutral/0",
+   "neutral/800"
+  ],
+  "surface/brand/primary": [
+   "primary/500",
+   "primary/400"
+  ],
+  "surface/brand/primary-subtle": [
+   "primary/50",
+   "primary/800"
+  ],
+  "surface/brand/primary-hover": [
+   "primary/600",
+   "primary/300"
+  ],
+  "surface/brand/secondary": [
+   "secondary/500",
+   "secondary/600"
+  ],
+  "surface/brand/secondary-subtle": [
+   "secondary/50",
+   "secondary/800"
+  ],
+  "surface/brand/secondary-hover": [
+   "secondary/600",
+   "secondary/400"
+  ],
+  "surface/semantic/success": [
+   "success/600",
+   "success/600"
+  ],
+  "surface/semantic/success-subtle": [
+   "success/50",
+   "success/800"
+  ],
+  "surface/semantic/warning": [
+   "warning/500",
+   "warning/300"
+  ],
+  "surface/semantic/warning-subtle": [
+   "warning/50",
+   "warning/800"
+  ],
+  "surface/semantic/error": [
+   "error/600",
+   "error/600"
+  ],
+  "surface/semantic/error-subtle": [
+   "error/50",
+   "error/800"
+  ],
+  "surface/semantic/info": [
+   "info/500",
+   "info/500"
+  ],
+  "surface/semantic/info-subtle": [
+   "info/50",
+   "info/800"
+  ],
+  "surface/semantic/ai": [
+   "ai/500",
+   "ai/500"
+  ],
+  "surface/semantic/ai-subtle": [
+   "ai/50",
+   "ai/800"
+  ],
+  "surface/tag/neutral": [
+   "neutral/200",
+   "neutral/700"
+  ],
+  "surface/indicator/inactive": [
+   "neutral/300",
+   "neutral/600"
+  ],
+  "surface/indicator/inactive-on-media": [
+   "neutral/0",
+   "neutral/0"
+  ],
+  "surface/control/off": [
+   "neutral/300",
+   "neutral/600"
+  ],
+  "surface/control/off-hover": [
+   "neutral/400",
+   "neutral/500"
+  ],
+  "surface/scrollbar/thumb": [
+   "neutral/400",
+   "neutral/500"
+  ],
+  "surface/scrollbar/thumb-hover": [
+   "neutral/500",
+   "neutral/400"
+  ],
+  "surface/action/hover/brand-primary": [
+   "primary/600",
+   "primary/500"
+  ],
+  "surface/action/hover/brand-primary-subtle": [
+   "primary/100",
+   "primary/700"
+  ],
+  "surface/action/hover/brand-secondary": [
+   "secondary/600",
+   "secondary/700"
+  ],
+  "surface/action/hover/brand-secondary-subtle": [
+   "secondary/100",
+   "secondary/700"
+  ],
+  "surface/action/hover/black": [
+   "neutral/800",
+   "neutral/25"
+  ],
+  "surface/action/hover/black-subtle": [
+   "neutral/100",
+   "neutral/700"
+  ],
+  "surface/action/hover/error": [
+   "error/700",
+   "error/700"
+  ],
+  "surface/action/hover/error-subtle": [
+   "error/100",
+   "error/700"
+  ],
+  "surface/action/pressed/brand-primary": [
+   "primary/700",
+   "primary/600"
+  ],
+  "surface/action/pressed/brand-primary-subtle": [
+   "primary/200",
+   "primary/600"
+  ],
+  "surface/action/pressed/brand-secondary": [
+   "secondary/700",
+   "secondary/800"
+  ],
+  "surface/action/pressed/brand-secondary-subtle": [
+   "secondary/200",
+   "secondary/600"
+  ],
+  "surface/action/pressed/black": [
+   "neutral/700",
+   "neutral/50"
+  ],
+  "surface/action/pressed/black-subtle": [
+   "neutral/200",
+   "neutral/600"
+  ],
+  "surface/action/pressed/error": [
+   "error/800",
+   "error/800"
+  ],
+  "surface/action/pressed/error-subtle": [
+   "error/200",
+   "error/600"
+  ],
+  "background/primary": [
+   "neutral/0",
+   "neutral/1000"
+  ],
+  "background/secondary": [
+   "neutral/50",
+   "neutral/800"
+  ],
+  "background/tertiary": [
+   "neutral/100",
+   "neutral/700"
+  ],
+  "background/brand/primary": [
+   "primary/500",
+   "primary/400"
+  ],
+  "background/brand/primary-subtle": [
+   "primary/50",
+   "primary/800"
+  ],
+  "background/brand/secondary": [
+   "secondary/500",
+   "secondary/600"
+  ],
+  "background/brand/secondary-subtle": [
+   "secondary/50",
+   "secondary/800"
+  ],
+  "text/primary": [
+   "neutral/900",
+   "neutral/25"
+  ],
+  "text/secondary": [
+   "neutral/700",
+   "neutral/100"
+  ],
+  "text/tertiary": [
+   "neutral/500",
+   "neutral/300"
+  ],
+  "text/disabled": [
+   "neutral/400",
+   "neutral/600"
+  ],
+  "text/inverse": [
+   "neutral/0",
+   "neutral/1000"
+  ],
+  "text/on-color": [
+   "neutral/0",
+   "neutral/0"
+  ],
+  "text/link": [
+   "primary/500",
+   "primary/300"
+  ],
+  "text/link-hover": [
+   "primary/700",
+   "primary/200"
+  ],
+  "text/brand/primary": [
+   "primary/500",
+   "primary/300"
+  ],
+  "text/brand/secondary": [
+   "secondary/500",
+   "secondary/300"
+  ],
+  "text/semantic/success": [
+   "success/700",
+   "success/300"
+  ],
+  "text/semantic/warning": [
+   "warning/800",
+   "warning/300"
+  ],
+  "text/semantic/error": [
+   "error/600",
+   "error/300"
+  ],
+  "text/semantic/info": [
+   "info/600",
+   "info/300"
+  ],
+  "text/semantic/ai": [
+   "ai/500",
+   "ai/300"
+  ],
+  "text/action/hover/brand-primary": [
+   "primary/600",
+   "primary/200"
+  ],
+  "text/action/hover/brand-primary-subtle": [
+   "primary/100",
+   "primary/700"
+  ],
+  "text/action/hover/brand-secondary": [
+   "secondary/600",
+   "secondary/200"
+  ],
+  "text/action/hover/brand-secondary-subtle": [
+   "secondary/100",
+   "secondary/700"
+  ],
+  "text/action/hover/brand-black": [
+   "neutral/800",
+   "neutral/50"
+  ],
+  "text/action/hover/black-subtle": [
+   "neutral/100",
+   "neutral/700"
+  ],
+  "text/action/hover/error": [
+   "error/700",
+   "error/200"
+  ],
+  "text/action/hover/error-subtle": [
+   "error/100",
+   "error/700"
+  ],
+  "text/action/pressed/brand-primary": [
+   "primary/700",
+   "primary/100"
+  ],
+  "text/action/pressed/brand-primary-subtle": [
+   "primary/200",
+   "primary/600"
+  ],
+  "text/action/pressed/brand-secondary": [
+   "secondary/700",
+   "secondary/100"
+  ],
+  "text/action/pressed/brand-secondary-subtle": [
+   "secondary/200",
+   "secondary/600"
+  ],
+  "text/action/pressed/black": [
+   "neutral/700",
+   "neutral/100"
+  ],
+  "text/action/pressed/black-subtle": [
+   "neutral/200",
+   "neutral/600"
+  ],
+  "text/action/pressed/error": [
+   "error/800",
+   "error/100"
+  ],
+  "text/action/pressed/error-subtle": [
+   "error/200",
+   "error/600"
+  ],
+  "icon/primary": [
+   "neutral/1000",
+   "neutral/0"
+  ],
+  "icon/secondary": [
+   "neutral/700",
+   "neutral/100"
+  ],
+  "icon/tertiary": [
+   "neutral/500",
+   "neutral/300"
+  ],
+  "icon/disabled": [
+   "neutral/400",
+   "neutral/600"
+  ],
+  "icon/inverse": [
+   "neutral/0",
+   "neutral/1000"
+  ],
+  "icon/on-color": [
+   "neutral/0",
+   "neutral/0"
+  ],
+  "icon/brand/primary": [
+   "primary/500",
+   "primary/300"
+  ],
+  "icon/brand/secondary": [
+   "secondary/500",
+   "secondary/300"
+  ],
+  "icon/semantic/success": [
+   "success/500",
+   "success/300"
+  ],
+  "icon/semantic/warning": [
+   "warning/700",
+   "warning/300"
+  ],
+  "icon/semantic/error": [
+   "error/500",
+   "error/300"
+  ],
+  "icon/semantic/info": [
+   "info/500",
+   "info/300"
+  ],
+  "icon/semantic/ai": [
+   "ai/500",
+   "ai/300"
+  ],
+  "icon/action/hover/brand-primary": [
+   "primary/600",
+   "primary/200"
+  ],
+  "icon/action/hover/brand-primary-subtle": [
+   "primary/100",
+   "primary/700"
+  ],
+  "icon/action/hover/brand-secondary": [
+   "secondary/600",
+   "secondary/200"
+  ],
+  "icon/action/hover/brand-secondary-subtle": [
+   "secondary/100",
+   "secondary/700"
+  ],
+  "icon/action/hover/black": [
+   "neutral/800",
+   "neutral/50"
+  ],
+  "icon/action/hover/black-subtle": [
+   "neutral/100",
+   "neutral/700"
+  ],
+  "icon/action/hover/error": [
+   "error/700",
+   "error/200"
+  ],
+  "icon/action/hover/brand-error-subtle": [
+   "error/100",
+   "error/700"
+  ],
+  "border/primary": [
+   "neutral/200",
+   "neutral/600"
+  ],
+  "border/secondary": [
+   "neutral/300",
+   "neutral/500"
+  ],
+  "border/subtle": [
+   "neutral/100",
+   "neutral/700"
+  ],
+  "border/inverse": [
+   "neutral/1000",
+   "neutral/0"
+  ],
+  "border/disabled": [
+   "neutral/200",
+   "neutral/600"
+  ],
+  "border/focus": [
+   "info/500",
+   "info/300"
+  ],
+  "border/action/focus": [
+   "info/500",
+   "info/300"
+  ],
+  "border/brand/primary": [
+   "primary/500",
+   "primary/300"
+  ],
+  "border/brand/primary-subtle": [
+   "primary/50",
+   "primary/800"
+  ],
+  "border/brand/secondary": [
+   "secondary/500",
+   "secondary/300"
+  ],
+  "border/brand/secondary-subtle": [
+   "secondary/50",
+   "secondary/800"
+  ],
+  "border/semantic/success": [
+   "success/500",
+   "success/300"
+  ],
+  "border/semantic/success-subtle": [
+   "success/50",
+   "success/800"
+  ],
+  "border/semantic/warning": [
+   "warning/500",
+   "warning/300"
+  ],
+  "border/semantic/warning-subtle": [
+   "warning/50",
+   "warning/800"
+  ],
+  "border/semantic/error": [
+   "error/500",
+   "error/300"
+  ],
+  "border/semantic/error-subtle": [
+   "error/50",
+   "error/800"
+  ],
+  "border/semantic/info": [
+   "info/500",
+   "info/300"
+  ],
+  "border/semantic/info-subtle": [
+   "info/50",
+   "info/800"
+  ],
+  "border/semantic/ai": [
+   "ai/500",
+   "ai/300"
+  ],
+  "border/semantic/ai-subtle": [
+   "ai/50",
+   "ai/800"
+  ],
+  "border/action/hover/brand-primary": [
+   "primary/600",
+   "primary/500"
+  ],
+  "border/action/hover/brand-primary-subtle": [
+   "primary/100",
+   "primary/700"
+  ],
+  "border/action/hover/brand-secondary": [
+   "secondary/600",
+   "secondary/700"
+  ],
+  "border/action/hover/brand-secondary-subtle": [
+   "secondary/100",
+   "secondary/700"
+  ],
+  "border/action/hover/black": [
+   "neutral/600",
+   "neutral/300"
+  ],
+  "border/action/hover/black-subtle": [
+   "neutral/100",
+   "neutral/700"
+  ],
+  "border/action/hover/error": [
+   "error/700",
+   "error/700"
+  ],
+  "border/action/hover/brand-error-subtle": [
+   "error/100",
+   "error/700"
+  ],
+  "border/action/pressed/brand-primary": [
+   "primary/700",
+   "primary/600"
+  ],
+  "border/action/pressed/brand-primary-subtle": [
+   "primary/200",
+   "primary/600"
+  ],
+  "border/action/pressed/brand-secondary": [
+   "secondary/700",
+   "secondary/800"
+  ],
+  "border/action/pressed/brand-secondary-subtle": [
+   "secondary/200",
+   "secondary/600"
+  ],
+  "border/action/pressed/black": [
+   "neutral/700",
+   "neutral/200"
+  ],
+  "border/action/pressed/black-subtle": [
+   "neutral/200",
+   "neutral/600"
+  ],
+  "border/action/pressed/error": [
+   "error/800",
+   "error/800"
+  ],
+  "border/action/pressed/error-subtle": [
+   "error/200",
+   "error/600"
+  ],
+  "icon/action/pressed/brand-primary": [
+   "primary/700",
+   "primary/100"
+  ],
+  "icon/action/pressed/brand-primary-subtle": [
+   "primary/200",
+   "primary/600"
+  ],
+  "icon/action/pressed/brand-secondary": [
+   "secondary/700",
+   "secondary/100"
+  ],
+  "icon/action/pressed/brand-secondary-subtle": [
+   "secondary/200",
+   "secondary/600"
+  ],
+  "icon/action/pressed/black": [
+   "neutral/700",
+   "neutral/100"
+  ],
+  "icon/action/pressed/black-subtle": [
+   "neutral/200",
+   "neutral/600"
+  ],
+  "icon/action/pressed/error": [
+   "error/800",
+   "error/100"
+  ],
+  "icon/action/pressed/error-subtle": [
+   "error/200",
+   "error/600"
+  ]
+ },
+ "brands": {
+  "Base": {
+   "ramps": {
+    "neutral/25": "#fafafa",
+    "neutral/50": "#f5f5f5",
+    "neutral/100": "#e9e9e9",
+    "neutral/200": "#d0d0d0",
+    "neutral/300": "#b3b3b3",
+    "neutral/400": "#949494",
+    "neutral/500": "#737373",
+    "neutral/600": "#5f5f5f",
+    "neutral/700": "#4c4c4c",
+    "neutral/800": "#3a3a3a",
+    "neutral/900": "#292929",
+    "neutral/0": "#ffffff",
+    "neutral/1000": "#0a0a0a",
+    "success/25": "#f6fcf7",
+    "success/50": "#edf9ef",
+    "success/100": "#daf0df",
+    "success/200": "#bae1c3",
+    "success/300": "#92cda2",
+    "success/400": "#62b77c",
+    "success/500": "#1f9d55",
+    "success/600": "#068142",
+    "success/700": "#026632",
+    "success/800": "#014b24",
+    "success/900": "#003316",
+    "warning/25": "#fef9f5",
+    "warning/50": "#fef3ea",
+    "warning/100": "#fce5d3",
+    "warning/200": "#f9d1b3",
+    "warning/300": "#f2b78a",
+    "warning/400": "#e99957",
+    "warning/500": "#d97706",
+    "warning/600": "#b05f01",
+    "warning/700": "#894902",
+    "warning/800": "#633301",
+    "warning/900": "#401f01",
+    "error/25": "#fff8f8",
+    "error/50": "#fef2f0",
+    "error/100": "#fee2de",
+    "error/200": "#fec1b9",
+    "error/300": "#fd978b",
+    "error/400": "#f1675c",
+    "error/500": "#dc2626",
+    "error/600": "#bd0211",
+    "error/700": "#99000b",
+    "error/800": "#750207",
+    "error/900": "#530104",
+    "info/25": "#f8faff",
+    "info/50": "#f0f5ff",
+    "info/100": "#dfeafe",
+    "info/200": "#b8d1ff",
+    "info/300": "#89b1ff",
+    "info/400": "#578dfa",
+    "info/500": "#2563eb",
+    "info/600": "#164fce",
+    "info/700": "#0c3eac",
+    "info/800": "#072f88",
+    "info/900": "#042165",
+    "ai/25": "#faf9fe",
+    "ai/50": "#f5f3ff",
+    "ai/100": "#eae6ff",
+    "ai/200": "#d1c7ff",
+    "ai/300": "#b5a0ff",
+    "ai/400": "#9972fc",
+    "ai/500": "#7c3aed",
+    "ai/600": "#6925d0",
+    "ai/700": "#5617ae",
+    "ai/800": "#430f8a",
+    "ai/900": "#300967",
+    "primary/25": "#f9fafe",
+    "primary/50": "#f2f4ff",
+    "primary/100": "#e4e8ff",
+    "primary/200": "#c0c9ff",
+    "primary/300": "#98a4ff",
+    "primary/400": "#7179f6",
+    "primary/500": "#4f46e5",
+    "primary/600": "#4235cb",
+    "primary/700": "#3629ab",
+    "primary/800": "#291f89",
+    "primary/900": "#1e1768",
+    "secondary/25": "#f6fcfb",
+    "secondary/50": "#ecf8f6",
+    "secondary/100": "#daefeb",
+    "secondary/200": "#b8ddd7",
+    "secondary/300": "#8fc8bf",
+    "secondary/400": "#5cb0a5",
+    "secondary/500": "#0d9488",
+    "secondary/600": "#057a6f",
+    "secondary/700": "#056058",
+    "secondary/800": "#024841",
+    "secondary/900": "#02302c"
+   },
+   "light": {
+    "surface/primary": "#ffffff",
+    "surface/secondary": "#f5f5f5",
+    "surface/tertiary": "#e9e9e9",
+    "surface/disabled": "#d0d0d0",
+    "surface/inverse": "#0a0a0a",
+    "surface/on-color": "#ffffff",
+    "surface/elevated": "#ffffff",
+    "surface/brand/primary": "#4f46e5",
+    "surface/brand/primary-subtle": "#f2f4ff",
+    "surface/brand/primary-hover": "#4235cb",
+    "surface/brand/secondary": "#0d9488",
+    "surface/brand/secondary-subtle": "#ecf8f6",
+    "surface/brand/secondary-hover": "#057a6f",
+    "surface/semantic/success": "#068142",
+    "surface/semantic/success-subtle": "#edf9ef",
+    "surface/semantic/warning": "#d97706",
+    "surface/semantic/warning-subtle": "#fef3ea",
+    "surface/semantic/error": "#bd0211",
+    "surface/semantic/error-subtle": "#fef2f0",
+    "surface/semantic/info": "#2563eb",
+    "surface/semantic/info-subtle": "#f0f5ff",
+    "surface/semantic/ai": "#7c3aed",
+    "surface/semantic/ai-subtle": "#f5f3ff",
+    "surface/tag/neutral": "#d0d0d0",
+    "surface/indicator/inactive": "#b3b3b3",
+    "surface/indicator/inactive-on-media": "#ffffff",
+    "surface/control/off": "#b3b3b3",
+    "surface/control/off-hover": "#949494",
+    "surface/scrollbar/thumb": "#949494",
+    "surface/scrollbar/thumb-hover": "#737373",
+    "surface/action/hover/brand-primary": "#4235cb",
+    "surface/action/hover/brand-primary-subtle": "#e4e8ff",
+    "surface/action/hover/brand-secondary": "#057a6f",
+    "surface/action/hover/brand-secondary-subtle": "#daefeb",
+    "surface/action/hover/black": "#3a3a3a",
+    "surface/action/hover/black-subtle": "#e9e9e9",
+    "surface/action/hover/error": "#99000b",
+    "surface/action/hover/error-subtle": "#fee2de",
+    "surface/action/pressed/brand-primary": "#3629ab",
+    "surface/action/pressed/brand-primary-subtle": "#c0c9ff",
+    "surface/action/pressed/brand-secondary": "#056058",
+    "surface/action/pressed/brand-secondary-subtle": "#b8ddd7",
+    "surface/action/pressed/black": "#4c4c4c",
+    "surface/action/pressed/black-subtle": "#d0d0d0",
+    "surface/action/pressed/error": "#750207",
+    "surface/action/pressed/error-subtle": "#fec1b9",
+    "background/primary": "#ffffff",
+    "background/secondary": "#f5f5f5",
+    "background/tertiary": "#e9e9e9",
+    "background/brand/primary": "#4f46e5",
+    "background/brand/primary-subtle": "#f2f4ff",
+    "background/brand/secondary": "#0d9488",
+    "background/brand/secondary-subtle": "#ecf8f6",
+    "text/primary": "#292929",
+    "text/secondary": "#4c4c4c",
+    "text/tertiary": "#737373",
+    "text/disabled": "#949494",
+    "text/inverse": "#ffffff",
+    "text/on-color": "#ffffff",
+    "text/link": "#4f46e5",
+    "text/link-hover": "#3629ab",
+    "text/brand/primary": "#4f46e5",
+    "text/brand/secondary": "#0d9488",
+    "text/semantic/success": "#026632",
+    "text/semantic/warning": "#633301",
+    "text/semantic/error": "#bd0211",
+    "text/semantic/info": "#164fce",
+    "text/semantic/ai": "#7c3aed",
+    "text/action/hover/brand-primary": "#4235cb",
+    "text/action/hover/brand-primary-subtle": "#e4e8ff",
+    "text/action/hover/brand-secondary": "#057a6f",
+    "text/action/hover/brand-secondary-subtle": "#daefeb",
+    "text/action/hover/brand-black": "#3a3a3a",
+    "text/action/hover/black-subtle": "#e9e9e9",
+    "text/action/hover/error": "#99000b",
+    "text/action/hover/error-subtle": "#fee2de",
+    "text/action/pressed/brand-primary": "#3629ab",
+    "text/action/pressed/brand-primary-subtle": "#c0c9ff",
+    "text/action/pressed/brand-secondary": "#056058",
+    "text/action/pressed/brand-secondary-subtle": "#b8ddd7",
+    "text/action/pressed/black": "#4c4c4c",
+    "text/action/pressed/black-subtle": "#d0d0d0",
+    "text/action/pressed/error": "#750207",
+    "text/action/pressed/error-subtle": "#fec1b9",
+    "icon/primary": "#0a0a0a",
+    "icon/secondary": "#4c4c4c",
+    "icon/tertiary": "#737373",
+    "icon/disabled": "#949494",
+    "icon/inverse": "#ffffff",
+    "icon/on-color": "#ffffff",
+    "icon/brand/primary": "#4f46e5",
+    "icon/brand/secondary": "#0d9488",
+    "icon/semantic/success": "#1f9d55",
+    "icon/semantic/warning": "#894902",
+    "icon/semantic/error": "#dc2626",
+    "icon/semantic/info": "#2563eb",
+    "icon/semantic/ai": "#7c3aed",
+    "icon/action/hover/brand-primary": "#4235cb",
+    "icon/action/hover/brand-primary-subtle": "#e4e8ff",
+    "icon/action/hover/brand-secondary": "#057a6f",
+    "icon/action/hover/brand-secondary-subtle": "#daefeb",
+    "icon/action/hover/black": "#3a3a3a",
+    "icon/action/hover/black-subtle": "#e9e9e9",
+    "icon/action/hover/error": "#99000b",
+    "icon/action/hover/brand-error-subtle": "#fee2de",
+    "border/primary": "#d0d0d0",
+    "border/secondary": "#b3b3b3",
+    "border/subtle": "#e9e9e9",
+    "border/inverse": "#0a0a0a",
+    "border/disabled": "#d0d0d0",
+    "border/focus": "#2563eb",
+    "border/action/focus": "#2563eb",
+    "border/brand/primary": "#4f46e5",
+    "border/brand/primary-subtle": "#f2f4ff",
+    "border/brand/secondary": "#0d9488",
+    "border/brand/secondary-subtle": "#ecf8f6",
+    "border/semantic/success": "#1f9d55",
+    "border/semantic/success-subtle": "#edf9ef",
+    "border/semantic/warning": "#d97706",
+    "border/semantic/warning-subtle": "#fef3ea",
+    "border/semantic/error": "#dc2626",
+    "border/semantic/error-subtle": "#fef2f0",
+    "border/semantic/info": "#2563eb",
+    "border/semantic/info-subtle": "#f0f5ff",
+    "border/semantic/ai": "#7c3aed",
+    "border/semantic/ai-subtle": "#f5f3ff",
+    "border/action/hover/brand-primary": "#4235cb",
+    "border/action/hover/brand-primary-subtle": "#e4e8ff",
+    "border/action/hover/brand-secondary": "#057a6f",
+    "border/action/hover/brand-secondary-subtle": "#daefeb",
+    "border/action/hover/black": "#5f5f5f",
+    "border/action/hover/black-subtle": "#e9e9e9",
+    "border/action/hover/error": "#99000b",
+    "border/action/hover/brand-error-subtle": "#fee2de",
+    "border/action/pressed/brand-primary": "#3629ab",
+    "border/action/pressed/brand-primary-subtle": "#c0c9ff",
+    "border/action/pressed/brand-secondary": "#056058",
+    "border/action/pressed/brand-secondary-subtle": "#b8ddd7",
+    "border/action/pressed/black": "#4c4c4c",
+    "border/action/pressed/black-subtle": "#d0d0d0",
+    "border/action/pressed/error": "#750207",
+    "border/action/pressed/error-subtle": "#fec1b9",
+    "icon/action/pressed/brand-primary": "#3629ab",
+    "icon/action/pressed/brand-primary-subtle": "#c0c9ff",
+    "icon/action/pressed/brand-secondary": "#056058",
+    "icon/action/pressed/brand-secondary-subtle": "#b8ddd7",
+    "icon/action/pressed/black": "#4c4c4c",
+    "icon/action/pressed/black-subtle": "#d0d0d0",
+    "icon/action/pressed/error": "#750207",
+    "icon/action/pressed/error-subtle": "#fec1b9"
+   },
+   "dark": {
+    "surface/primary": "#0a0a0a",
+    "surface/secondary": "#3a3a3a",
+    "surface/tertiary": "#4c4c4c",
+    "surface/disabled": "#5f5f5f",
+    "surface/inverse": "#ffffff",
+    "surface/on-color": "#ffffff",
+    "surface/elevated": "#3a3a3a",
+    "surface/brand/primary": "#7179f6",
+    "surface/brand/primary-subtle": "#291f89",
+    "surface/brand/primary-hover": "#98a4ff",
+    "surface/brand/secondary": "#057a6f",
+    "surface/brand/secondary-subtle": "#024841",
+    "surface/brand/secondary-hover": "#5cb0a5",
+    "surface/semantic/success": "#068142",
+    "surface/semantic/success-subtle": "#014b24",
+    "surface/semantic/warning": "#f2b78a",
+    "surface/semantic/warning-subtle": "#633301",
+    "surface/semantic/error": "#bd0211",
+    "surface/semantic/error-subtle": "#750207",
+    "surface/semantic/info": "#2563eb",
+    "surface/semantic/info-subtle": "#072f88",
+    "surface/semantic/ai": "#7c3aed",
+    "surface/semantic/ai-subtle": "#430f8a",
+    "surface/tag/neutral": "#4c4c4c",
+    "surface/indicator/inactive": "#5f5f5f",
+    "surface/indicator/inactive-on-media": "#ffffff",
+    "surface/control/off": "#5f5f5f",
+    "surface/control/off-hover": "#737373",
+    "surface/scrollbar/thumb": "#737373",
+    "surface/scrollbar/thumb-hover": "#949494",
+    "surface/action/hover/brand-primary": "#4f46e5",
+    "surface/action/hover/brand-primary-subtle": "#3629ab",
+    "surface/action/hover/brand-secondary": "#056058",
+    "surface/action/hover/brand-secondary-subtle": "#056058",
+    "surface/action/hover/black": "#fafafa",
+    "surface/action/hover/black-subtle": "#4c4c4c",
+    "surface/action/hover/error": "#99000b",
+    "surface/action/hover/error-subtle": "#99000b",
+    "surface/action/pressed/brand-primary": "#4235cb",
+    "surface/action/pressed/brand-primary-subtle": "#4235cb",
+    "surface/action/pressed/brand-secondary": "#024841",
+    "surface/action/pressed/brand-secondary-subtle": "#057a6f",
+    "surface/action/pressed/black": "#f5f5f5",
+    "surface/action/pressed/black-subtle": "#5f5f5f",
+    "surface/action/pressed/error": "#750207",
+    "surface/action/pressed/error-subtle": "#bd0211",
+    "background/primary": "#0a0a0a",
+    "background/secondary": "#3a3a3a",
+    "background/tertiary": "#4c4c4c",
+    "background/brand/primary": "#7179f6",
+    "background/brand/primary-subtle": "#291f89",
+    "background/brand/secondary": "#057a6f",
+    "background/brand/secondary-subtle": "#024841",
+    "text/primary": "#fafafa",
+    "text/secondary": "#e9e9e9",
+    "text/tertiary": "#b3b3b3",
+    "text/disabled": "#5f5f5f",
+    "text/inverse": "#0a0a0a",
+    "text/on-color": "#ffffff",
+    "text/link": "#98a4ff",
+    "text/link-hover": "#c0c9ff",
+    "text/brand/primary": "#98a4ff",
+    "text/brand/secondary": "#8fc8bf",
+    "text/semantic/success": "#92cda2",
+    "text/semantic/warning": "#f2b78a",
+    "text/semantic/error": "#fd978b",
+    "text/semantic/info": "#89b1ff",
+    "text/semantic/ai": "#b5a0ff",
+    "text/action/hover/brand-primary": "#c0c9ff",
+    "text/action/hover/brand-primary-subtle": "#3629ab",
+    "text/action/hover/brand-secondary": "#b8ddd7",
+    "text/action/hover/brand-secondary-subtle": "#056058",
+    "text/action/hover/brand-black": "#f5f5f5",
+    "text/action/hover/black-subtle": "#4c4c4c",
+    "text/action/hover/error": "#fec1b9",
+    "text/action/hover/error-subtle": "#99000b",
+    "text/action/pressed/brand-primary": "#e4e8ff",
+    "text/action/pressed/brand-primary-subtle": "#4235cb",
+    "text/action/pressed/brand-secondary": "#daefeb",
+    "text/action/pressed/brand-secondary-subtle": "#057a6f",
+    "text/action/pressed/black": "#e9e9e9",
+    "text/action/pressed/black-subtle": "#5f5f5f",
+    "text/action/pressed/error": "#fee2de",
+    "text/action/pressed/error-subtle": "#bd0211",
+    "icon/primary": "#ffffff",
+    "icon/secondary": "#e9e9e9",
+    "icon/tertiary": "#b3b3b3",
+    "icon/disabled": "#5f5f5f",
+    "icon/inverse": "#0a0a0a",
+    "icon/on-color": "#ffffff",
+    "icon/brand/primary": "#98a4ff",
+    "icon/brand/secondary": "#8fc8bf",
+    "icon/semantic/success": "#92cda2",
+    "icon/semantic/warning": "#f2b78a",
+    "icon/semantic/error": "#fd978b",
+    "icon/semantic/info": "#89b1ff",
+    "icon/semantic/ai": "#b5a0ff",
+    "icon/action/hover/brand-primary": "#c0c9ff",
+    "icon/action/hover/brand-primary-subtle": "#3629ab",
+    "icon/action/hover/brand-secondary": "#b8ddd7",
+    "icon/action/hover/brand-secondary-subtle": "#056058",
+    "icon/action/hover/black": "#f5f5f5",
+    "icon/action/hover/black-subtle": "#4c4c4c",
+    "icon/action/hover/error": "#fec1b9",
+    "icon/action/hover/brand-error-subtle": "#99000b",
+    "border/primary": "#5f5f5f",
+    "border/secondary": "#737373",
+    "border/subtle": "#4c4c4c",
+    "border/inverse": "#ffffff",
+    "border/disabled": "#5f5f5f",
+    "border/focus": "#89b1ff",
+    "border/action/focus": "#89b1ff",
+    "border/brand/primary": "#98a4ff",
+    "border/brand/primary-subtle": "#291f89",
+    "border/brand/secondary": "#8fc8bf",
+    "border/brand/secondary-subtle": "#024841",
+    "border/semantic/success": "#92cda2",
+    "border/semantic/success-subtle": "#014b24",
+    "border/semantic/warning": "#f2b78a",
+    "border/semantic/warning-subtle": "#633301",
+    "border/semantic/error": "#fd978b",
+    "border/semantic/error-subtle": "#750207",
+    "border/semantic/info": "#89b1ff",
+    "border/semantic/info-subtle": "#072f88",
+    "border/semantic/ai": "#b5a0ff",
+    "border/semantic/ai-subtle": "#430f8a",
+    "border/action/hover/brand-primary": "#4f46e5",
+    "border/action/hover/brand-primary-subtle": "#3629ab",
+    "border/action/hover/brand-secondary": "#056058",
+    "border/action/hover/brand-secondary-subtle": "#056058",
+    "border/action/hover/black": "#b3b3b3",
+    "border/action/hover/black-subtle": "#4c4c4c",
+    "border/action/hover/error": "#99000b",
+    "border/action/hover/brand-error-subtle": "#99000b",
+    "border/action/pressed/brand-primary": "#4235cb",
+    "border/action/pressed/brand-primary-subtle": "#4235cb",
+    "border/action/pressed/brand-secondary": "#024841",
+    "border/action/pressed/brand-secondary-subtle": "#057a6f",
+    "border/action/pressed/black": "#d0d0d0",
+    "border/action/pressed/black-subtle": "#5f5f5f",
+    "border/action/pressed/error": "#750207",
+    "border/action/pressed/error-subtle": "#bd0211",
+    "icon/action/pressed/brand-primary": "#e4e8ff",
+    "icon/action/pressed/brand-primary-subtle": "#4235cb",
+    "icon/action/pressed/brand-secondary": "#daefeb",
+    "icon/action/pressed/brand-secondary-subtle": "#057a6f",
+    "icon/action/pressed/black": "#e9e9e9",
+    "icon/action/pressed/black-subtle": "#5f5f5f",
+    "icon/action/pressed/error": "#fee2de",
+    "icon/action/pressed/error-subtle": "#bd0211"
+   },
+   "numbers": {
+    "radius/button": "8",
+    "radius/text-field": "8",
+    "radius/chip": "Full",
+    "radius/modal": "12",
+    "radius/card": "12",
+    "height/button-large": "48",
+    "height/button-medium": "44",
+    "height/button-small": "36",
+    "height/text-field": "44",
+    "height/bottom-navbar": "64",
+    "height/badge-number": "18",
+    "radius/checkbox": "4",
+    "radius/table": "8",
+    "radius/tag": "8"
+   },
+   "font": "Inter",
+   "radius_button": 8
+  },
+  "Nimbus": {
+   "ramps": {
+    "neutral/25": "#fafafa",
+    "neutral/50": "#f5f5f5",
+    "neutral/100": "#e9e9e9",
+    "neutral/200": "#d0d0d0",
+    "neutral/300": "#b3b3b3",
+    "neutral/400": "#949494",
+    "neutral/500": "#737373",
+    "neutral/600": "#5f5f5f",
+    "neutral/700": "#4c4c4c",
+    "neutral/800": "#3a3a3a",
+    "neutral/900": "#292929",
+    "neutral/0": "#ffffff",
+    "neutral/1000": "#0a0a0a",
+    "success/25": "#f6fcf7",
+    "success/50": "#edf9ef",
+    "success/100": "#daf0df",
+    "success/200": "#bae1c3",
+    "success/300": "#92cda2",
+    "success/400": "#62b77c",
+    "success/500": "#1f9d55",
+    "success/600": "#068142",
+    "success/700": "#026632",
+    "success/800": "#014b24",
+    "success/900": "#003316",
+    "warning/25": "#fef9f5",
+    "warning/50": "#fef3ea",
+    "warning/100": "#fce5d3",
+    "warning/200": "#f9d1b3",
+    "warning/300": "#f2b78a",
+    "warning/400": "#e99957",
+    "warning/500": "#d97706",
+    "warning/600": "#b05f01",
+    "warning/700": "#894902",
+    "warning/800": "#633301",
+    "warning/900": "#401f01",
+    "error/25": "#fff8f8",
+    "error/50": "#fef2f0",
+    "error/100": "#fee2de",
+    "error/200": "#fec1b9",
+    "error/300": "#fd978b",
+    "error/400": "#f1675c",
+    "error/500": "#dc2626",
+    "error/600": "#bd0211",
+    "error/700": "#99000b",
+    "error/800": "#750207",
+    "error/900": "#530104",
+    "info/25": "#f8faff",
+    "info/50": "#f0f5ff",
+    "info/100": "#dfeafe",
+    "info/200": "#b8d1ff",
+    "info/300": "#89b1ff",
+    "info/400": "#578dfa",
+    "info/500": "#2563eb",
+    "info/600": "#164fce",
+    "info/700": "#0c3eac",
+    "info/800": "#072f88",
+    "info/900": "#042165",
+    "ai/25": "#faf9fe",
+    "ai/50": "#f5f3ff",
+    "ai/100": "#eae6ff",
+    "ai/200": "#d1c7ff",
+    "ai/300": "#b5a0ff",
+    "ai/400": "#9972fc",
+    "ai/500": "#7c3aed",
+    "ai/600": "#6925d0",
+    "ai/700": "#5617ae",
+    "ai/800": "#430f8a",
+    "ai/900": "#300967",
+    "primary/25": "#f6fbfb",
+    "primary/50": "#eef7f6",
+    "primary/100": "#dceeeb",
+    "primary/200": "#b6d4d0",
+    "primary/300": "#89b7b1",
+    "primary/400": "#569891",
+    "primary/500": "#0f766e",
+    "primary/600": "#06645d",
+    "primary/700": "#00524c",
+    "primary/800": "#02413c",
+    "primary/900": "#02302d",
+    "secondary/25": "#fff9f3",
+    "secondary/50": "#fef3e7",
+    "secondary/100": "#fae6d0",
+    "secondary/200": "#fedcb5",
+    "secondary/300": "#fecb90",
+    "secondary/400": "#fdb65f",
+    "secondary/500": "#f59e0b",
+    "secondary/600": "#c37d07",
+    "secondary/700": "#925d05",
+    "secondary/800": "#653e01",
+    "secondary/900": "#3b2301"
+   },
+   "light": {
+    "surface/primary": "#ffffff",
+    "surface/secondary": "#f5f5f5",
+    "surface/tertiary": "#e9e9e9",
+    "surface/disabled": "#d0d0d0",
+    "surface/inverse": "#0a0a0a",
+    "surface/on-color": "#ffffff",
+    "surface/elevated": "#ffffff",
+    "surface/brand/primary": "#0f766e",
+    "surface/brand/primary-subtle": "#eef7f6",
+    "surface/brand/primary-hover": "#06645d",
+    "surface/brand/secondary": "#f59e0b",
+    "surface/brand/secondary-subtle": "#fef3e7",
+    "surface/brand/secondary-hover": "#c37d07",
+    "surface/semantic/success": "#068142",
+    "surface/semantic/success-subtle": "#edf9ef",
+    "surface/semantic/warning": "#d97706",
+    "surface/semantic/warning-subtle": "#fef3ea",
+    "surface/semantic/error": "#bd0211",
+    "surface/semantic/error-subtle": "#fef2f0",
+    "surface/semantic/info": "#2563eb",
+    "surface/semantic/info-subtle": "#f0f5ff",
+    "surface/semantic/ai": "#7c3aed",
+    "surface/semantic/ai-subtle": "#f5f3ff",
+    "surface/tag/neutral": "#d0d0d0",
+    "surface/indicator/inactive": "#b3b3b3",
+    "surface/indicator/inactive-on-media": "#ffffff",
+    "surface/control/off": "#b3b3b3",
+    "surface/control/off-hover": "#949494",
+    "surface/scrollbar/thumb": "#949494",
+    "surface/scrollbar/thumb-hover": "#737373",
+    "surface/action/hover/brand-primary": "#06645d",
+    "surface/action/hover/brand-primary-subtle": "#dceeeb",
+    "surface/action/hover/brand-secondary": "#c37d07",
+    "surface/action/hover/brand-secondary-subtle": "#fae6d0",
+    "surface/action/hover/black": "#3a3a3a",
+    "surface/action/hover/black-subtle": "#e9e9e9",
+    "surface/action/hover/error": "#99000b",
+    "surface/action/hover/error-subtle": "#fee2de",
+    "surface/action/pressed/brand-primary": "#00524c",
+    "surface/action/pressed/brand-primary-subtle": "#b6d4d0",
+    "surface/action/pressed/brand-secondary": "#925d05",
+    "surface/action/pressed/brand-secondary-subtle": "#fedcb5",
+    "surface/action/pressed/black": "#4c4c4c",
+    "surface/action/pressed/black-subtle": "#d0d0d0",
+    "surface/action/pressed/error": "#750207",
+    "surface/action/pressed/error-subtle": "#fec1b9",
+    "background/primary": "#ffffff",
+    "background/secondary": "#f5f5f5",
+    "background/tertiary": "#e9e9e9",
+    "background/brand/primary": "#0f766e",
+    "background/brand/primary-subtle": "#eef7f6",
+    "background/brand/secondary": "#f59e0b",
+    "background/brand/secondary-subtle": "#fef3e7",
+    "text/primary": "#292929",
+    "text/secondary": "#4c4c4c",
+    "text/tertiary": "#737373",
+    "text/disabled": "#949494",
+    "text/inverse": "#ffffff",
+    "text/on-color": "#ffffff",
+    "text/link": "#0f766e",
+    "text/link-hover": "#00524c",
+    "text/brand/primary": "#0f766e",
+    "text/brand/secondary": "#f59e0b",
+    "text/semantic/success": "#026632",
+    "text/semantic/warning": "#633301",
+    "text/semantic/error": "#bd0211",
+    "text/semantic/info": "#164fce",
+    "text/semantic/ai": "#7c3aed",
+    "text/action/hover/brand-primary": "#06645d",
+    "text/action/hover/brand-primary-subtle": "#dceeeb",
+    "text/action/hover/brand-secondary": "#c37d07",
+    "text/action/hover/brand-secondary-subtle": "#fae6d0",
+    "text/action/hover/brand-black": "#3a3a3a",
+    "text/action/hover/black-subtle": "#e9e9e9",
+    "text/action/hover/error": "#99000b",
+    "text/action/hover/error-subtle": "#fee2de",
+    "text/action/pressed/brand-primary": "#00524c",
+    "text/action/pressed/brand-primary-subtle": "#b6d4d0",
+    "text/action/pressed/brand-secondary": "#925d05",
+    "text/action/pressed/brand-secondary-subtle": "#fedcb5",
+    "text/action/pressed/black": "#4c4c4c",
+    "text/action/pressed/black-subtle": "#d0d0d0",
+    "text/action/pressed/error": "#750207",
+    "text/action/pressed/error-subtle": "#fec1b9",
+    "icon/primary": "#0a0a0a",
+    "icon/secondary": "#4c4c4c",
+    "icon/tertiary": "#737373",
+    "icon/disabled": "#949494",
+    "icon/inverse": "#ffffff",
+    "icon/on-color": "#ffffff",
+    "icon/brand/primary": "#0f766e",
+    "icon/brand/secondary": "#f59e0b",
+    "icon/semantic/success": "#1f9d55",
+    "icon/semantic/warning": "#894902",
+    "icon/semantic/error": "#dc2626",
+    "icon/semantic/info": "#2563eb",
+    "icon/semantic/ai": "#7c3aed",
+    "icon/action/hover/brand-primary": "#06645d",
+    "icon/action/hover/brand-primary-subtle": "#dceeeb",
+    "icon/action/hover/brand-secondary": "#c37d07",
+    "icon/action/hover/brand-secondary-subtle": "#fae6d0",
+    "icon/action/hover/black": "#3a3a3a",
+    "icon/action/hover/black-subtle": "#e9e9e9",
+    "icon/action/hover/error": "#99000b",
+    "icon/action/hover/brand-error-subtle": "#fee2de",
+    "border/primary": "#d0d0d0",
+    "border/secondary": "#b3b3b3",
+    "border/subtle": "#e9e9e9",
+    "border/inverse": "#0a0a0a",
+    "border/disabled": "#d0d0d0",
+    "border/focus": "#2563eb",
+    "border/action/focus": "#2563eb",
+    "border/brand/primary": "#0f766e",
+    "border/brand/primary-subtle": "#eef7f6",
+    "border/brand/secondary": "#f59e0b",
+    "border/brand/secondary-subtle": "#fef3e7",
+    "border/semantic/success": "#1f9d55",
+    "border/semantic/success-subtle": "#edf9ef",
+    "border/semantic/warning": "#d97706",
+    "border/semantic/warning-subtle": "#fef3ea",
+    "border/semantic/error": "#dc2626",
+    "border/semantic/error-subtle": "#fef2f0",
+    "border/semantic/info": "#2563eb",
+    "border/semantic/info-subtle": "#f0f5ff",
+    "border/semantic/ai": "#7c3aed",
+    "border/semantic/ai-subtle": "#f5f3ff",
+    "border/action/hover/brand-primary": "#06645d",
+    "border/action/hover/brand-primary-subtle": "#dceeeb",
+    "border/action/hover/brand-secondary": "#c37d07",
+    "border/action/hover/brand-secondary-subtle": "#fae6d0",
+    "border/action/hover/black": "#5f5f5f",
+    "border/action/hover/black-subtle": "#e9e9e9",
+    "border/action/hover/error": "#99000b",
+    "border/action/hover/brand-error-subtle": "#fee2de",
+    "border/action/pressed/brand-primary": "#00524c",
+    "border/action/pressed/brand-primary-subtle": "#b6d4d0",
+    "border/action/pressed/brand-secondary": "#925d05",
+    "border/action/pressed/brand-secondary-subtle": "#fedcb5",
+    "border/action/pressed/black": "#4c4c4c",
+    "border/action/pressed/black-subtle": "#d0d0d0",
+    "border/action/pressed/error": "#750207",
+    "border/action/pressed/error-subtle": "#fec1b9",
+    "icon/action/pressed/brand-primary": "#00524c",
+    "icon/action/pressed/brand-primary-subtle": "#b6d4d0",
+    "icon/action/pressed/brand-secondary": "#925d05",
+    "icon/action/pressed/brand-secondary-subtle": "#fedcb5",
+    "icon/action/pressed/black": "#4c4c4c",
+    "icon/action/pressed/black-subtle": "#d0d0d0",
+    "icon/action/pressed/error": "#750207",
+    "icon/action/pressed/error-subtle": "#fec1b9"
+   },
+   "dark": {
+    "surface/primary": "#0a0a0a",
+    "surface/secondary": "#3a3a3a",
+    "surface/tertiary": "#4c4c4c",
+    "surface/disabled": "#5f5f5f",
+    "surface/inverse": "#ffffff",
+    "surface/on-color": "#ffffff",
+    "surface/elevated": "#3a3a3a",
+    "surface/brand/primary": "#569891",
+    "surface/brand/primary-subtle": "#02413c",
+    "surface/brand/primary-hover": "#89b7b1",
+    "surface/brand/secondary": "#c37d07",
+    "surface/brand/secondary-subtle": "#653e01",
+    "surface/brand/secondary-hover": "#fdb65f",
+    "surface/semantic/success": "#068142",
+    "surface/semantic/success-subtle": "#014b24",
+    "surface/semantic/warning": "#f2b78a",
+    "surface/semantic/warning-subtle": "#633301",
+    "surface/semantic/error": "#bd0211",
+    "surface/semantic/error-subtle": "#750207",
+    "surface/semantic/info": "#2563eb",
+    "surface/semantic/info-subtle": "#072f88",
+    "surface/semantic/ai": "#7c3aed",
+    "surface/semantic/ai-subtle": "#430f8a",
+    "surface/tag/neutral": "#4c4c4c",
+    "surface/indicator/inactive": "#5f5f5f",
+    "surface/indicator/inactive-on-media": "#ffffff",
+    "surface/control/off": "#5f5f5f",
+    "surface/control/off-hover": "#737373",
+    "surface/scrollbar/thumb": "#737373",
+    "surface/scrollbar/thumb-hover": "#949494",
+    "surface/action/hover/brand-primary": "#0f766e",
+    "surface/action/hover/brand-primary-subtle": "#00524c",
+    "surface/action/hover/brand-secondary": "#925d05",
+    "surface/action/hover/brand-secondary-subtle": "#925d05",
+    "surface/action/hover/black": "#fafafa",
+    "surface/action/hover/black-subtle": "#4c4c4c",
+    "surface/action/hover/error": "#99000b",
+    "surface/action/hover/error-subtle": "#99000b",
+    "surface/action/pressed/brand-primary": "#06645d",
+    "surface/action/pressed/brand-primary-subtle": "#06645d",
+    "surface/action/pressed/brand-secondary": "#653e01",
+    "surface/action/pressed/brand-secondary-subtle": "#c37d07",
+    "surface/action/pressed/black": "#f5f5f5",
+    "surface/action/pressed/black-subtle": "#5f5f5f",
+    "surface/action/pressed/error": "#750207",
+    "surface/action/pressed/error-subtle": "#bd0211",
+    "background/primary": "#0a0a0a",
+    "background/secondary": "#3a3a3a",
+    "background/tertiary": "#4c4c4c",
+    "background/brand/primary": "#569891",
+    "background/brand/primary-subtle": "#02413c",
+    "background/brand/secondary": "#c37d07",
+    "background/brand/secondary-subtle": "#653e01",
+    "text/primary": "#fafafa",
+    "text/secondary": "#e9e9e9",
+    "text/tertiary": "#b3b3b3",
+    "text/disabled": "#5f5f5f",
+    "text/inverse": "#0a0a0a",
+    "text/on-color": "#ffffff",
+    "text/link": "#89b7b1",
+    "text/link-hover": "#b6d4d0",
+    "text/brand/primary": "#89b7b1",
+    "text/brand/secondary": "#fecb90",
+    "text/semantic/success": "#92cda2",
+    "text/semantic/warning": "#f2b78a",
+    "text/semantic/error": "#fd978b",
+    "text/semantic/info": "#89b1ff",
+    "text/semantic/ai": "#b5a0ff",
+    "text/action/hover/brand-primary": "#b6d4d0",
+    "text/action/hover/brand-primary-subtle": "#00524c",
+    "text/action/hover/brand-secondary": "#fedcb5",
+    "text/action/hover/brand-secondary-subtle": "#925d05",
+    "text/action/hover/brand-black": "#f5f5f5",
+    "text/action/hover/black-subtle": "#4c4c4c",
+    "text/action/hover/error": "#fec1b9",
+    "text/action/hover/error-subtle": "#99000b",
+    "text/action/pressed/brand-primary": "#dceeeb",
+    "text/action/pressed/brand-primary-subtle": "#06645d",
+    "text/action/pressed/brand-secondary": "#fae6d0",
+    "text/action/pressed/brand-secondary-subtle": "#c37d07",
+    "text/action/pressed/black": "#e9e9e9",
+    "text/action/pressed/black-subtle": "#5f5f5f",
+    "text/action/pressed/error": "#fee2de",
+    "text/action/pressed/error-subtle": "#bd0211",
+    "icon/primary": "#ffffff",
+    "icon/secondary": "#e9e9e9",
+    "icon/tertiary": "#b3b3b3",
+    "icon/disabled": "#5f5f5f",
+    "icon/inverse": "#0a0a0a",
+    "icon/on-color": "#ffffff",
+    "icon/brand/primary": "#89b7b1",
+    "icon/brand/secondary": "#fecb90",
+    "icon/semantic/success": "#92cda2",
+    "icon/semantic/warning": "#f2b78a",
+    "icon/semantic/error": "#fd978b",
+    "icon/semantic/info": "#89b1ff",
+    "icon/semantic/ai": "#b5a0ff",
+    "icon/action/hover/brand-primary": "#b6d4d0",
+    "icon/action/hover/brand-primary-subtle": "#00524c",
+    "icon/action/hover/brand-secondary": "#fedcb5",
+    "icon/action/hover/brand-secondary-subtle": "#925d05",
+    "icon/action/hover/black": "#f5f5f5",
+    "icon/action/hover/black-subtle": "#4c4c4c",
+    "icon/action/hover/error": "#fec1b9",
+    "icon/action/hover/brand-error-subtle": "#99000b",
+    "border/primary": "#5f5f5f",
+    "border/secondary": "#737373",
+    "border/subtle": "#4c4c4c",
+    "border/inverse": "#ffffff",
+    "border/disabled": "#5f5f5f",
+    "border/focus": "#89b1ff",
+    "border/action/focus": "#89b1ff",
+    "border/brand/primary": "#89b7b1",
+    "border/brand/primary-subtle": "#02413c",
+    "border/brand/secondary": "#fecb90",
+    "border/brand/secondary-subtle": "#653e01",
+    "border/semantic/success": "#92cda2",
+    "border/semantic/success-subtle": "#014b24",
+    "border/semantic/warning": "#f2b78a",
+    "border/semantic/warning-subtle": "#633301",
+    "border/semantic/error": "#fd978b",
+    "border/semantic/error-subtle": "#750207",
+    "border/semantic/info": "#89b1ff",
+    "border/semantic/info-subtle": "#072f88",
+    "border/semantic/ai": "#b5a0ff",
+    "border/semantic/ai-subtle": "#430f8a",
+    "border/action/hover/brand-primary": "#0f766e",
+    "border/action/hover/brand-primary-subtle": "#00524c",
+    "border/action/hover/brand-secondary": "#925d05",
+    "border/action/hover/brand-secondary-subtle": "#925d05",
+    "border/action/hover/black": "#b3b3b3",
+    "border/action/hover/black-subtle": "#4c4c4c",
+    "border/action/hover/error": "#99000b",
+    "border/action/hover/brand-error-subtle": "#99000b",
+    "border/action/pressed/brand-primary": "#06645d",
+    "border/action/pressed/brand-primary-subtle": "#06645d",
+    "border/action/pressed/brand-secondary": "#653e01",
+    "border/action/pressed/brand-secondary-subtle": "#c37d07",
+    "border/action/pressed/black": "#d0d0d0",
+    "border/action/pressed/black-subtle": "#5f5f5f",
+    "border/action/pressed/error": "#750207",
+    "border/action/pressed/error-subtle": "#bd0211",
+    "icon/action/pressed/brand-primary": "#dceeeb",
+    "icon/action/pressed/brand-primary-subtle": "#06645d",
+    "icon/action/pressed/brand-secondary": "#fae6d0",
+    "icon/action/pressed/brand-secondary-subtle": "#c37d07",
+    "icon/action/pressed/black": "#e9e9e9",
+    "icon/action/pressed/black-subtle": "#5f5f5f",
+    "icon/action/pressed/error": "#fee2de",
+    "icon/action/pressed/error-subtle": "#bd0211"
+   },
+   "numbers": {
+    "radius/button": "12",
+    "radius/text-field": "12",
+    "radius/chip": "Full",
+    "radius/modal": "12",
+    "radius/card": "12",
+    "height/button-large": "48",
+    "height/button-medium": "44",
+    "height/button-small": "36",
+    "height/text-field": "44",
+    "height/bottom-navbar": "64",
+    "height/badge-number": "18",
+    "radius/checkbox": "4",
+    "radius/table": "8",
+    "radius/tag": "12"
+   },
+   "font": "Plus Jakarta Sans",
+   "radius_button": 12
+  }
+ }
+}

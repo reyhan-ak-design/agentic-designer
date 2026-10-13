@@ -1,0 +1,19 @@
+# Figma Plugin API gotchas (append every new failure)
+- Setting `layoutSizingHorizontal/Vertical = 'FILL'|'HUG'` before the node is inside an auto-layout parent throws or is ignored → append first.
+- Reparenting a node created in a previous call with `appendChild` can silently fail → build inside the wrapper in the same call.
+- Page context resets every call → call `setCurrentPageAsync` once per script, at the top.
+- `getLocalVariableCollectionsAsync()` empty ≠ no variables: library variables need import by key (manifest).
+- Variables default to ALL_SCOPES → always set `scopes` when creating variables.
+- `get_design_context` may return base-component tokens for variants → audit variants with `get_variable_defs` or a script.
+- Text on an unloaded font measures 0 and throws on `characters` → load fonts (manifest) first.
+- `layoutPositioning = 'ABSOLUTE'` must be set before `x`/`y`.
+- Moving the last variant out of a component set deletes the set → never move variants during screen builds.
+- Instances: override text through component properties; editing nested text directly creates overrides that break on swap.
+- Only `return`ed values are visible to the agent; `console.log` is not.
+- Traversal can come back truncated (instance sublayers missing) when the page is not current — use `findAll(() => true)`, and if the count is implausibly low, `setCurrentPageAsync(page)` once and retry. Never rely on `page.loadAsync()` for this.
+- Only returned values are visible to the agent; `console.log` is not. Always `return { createdNodeIds, errors }`.
+- Load fonts before setting `characters` (use the style's `fontName`), and never default to Inter — use the manifest font.
+- Variable-bound paints: use `figma.variables.setBoundVariableForPaint`; assigning `boundVariables` directly does nothing.
+- `get_design_context` can return base-component tokens for variants — use `get_variable_defs` or a script for token audits.
+- Text overrides go through component TEXT properties (`Label#2:0`), not by editing the text layer inside an instance.
+- On errors, obey `safeToRetryWithoutCanvasRead`; if false, read the canvas before retrying.

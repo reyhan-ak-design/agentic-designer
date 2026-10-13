@@ -1,0 +1,20 @@
+{
+  "extraKnownMarketplaces": {
+    "agentic-designer-marketplace": {
+      "source": { "source": "git", "url": "https://github.com/reyhan-ak-design/agentic-designer.git" }
+    }
+  },
+  "enabledPlugins": {
+    "agentic-designer@agentic-designer-marketplace": true
+  },
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "Bash(curl -L -o * https://images.unsplash.com/*)",
+      "Bash(curl -sL https://images.unsplash.com/*)",
+      "Bash(node *make-lottie.js *)",
+      "Bash(node *proto-lint.js *)"
+    ]
+  }
+}

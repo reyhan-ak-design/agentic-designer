@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- Agentic Designer prototype shell. Pandu fills SCREENS, MOCK, and the <template> blocks. Uses kit only. -->
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{Product}} — Prototype</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="kit.css">
+<!-- icon set from the DS (one per project): Phosphor | Lucide | Solar (via Iconify) -->
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+/* prototype-only helpers — NO raw colors or sizes here; everything via --ad-* roles */
+.proto-bar{position:fixed;top:var(--ad-space-3);right:var(--ad-space-3);display:none;gap:var(--ad-space-2);flex-wrap:wrap;max-width:420px;z-index:10}
+body.show-states .proto-bar{display:flex}
+
+</style></head>
+<body data-platform="mobile" data-device="phone">
+<div class="ad-stage"><div class="ad-device" id="device"></div><div class="ad-hinge" aria-hidden="true"></div></div>
+<div class="proto-bar" id="bar" aria-label="States (press S)"></div>
+
+<!-- ===== screens: one <template> per screen; data-api marks screens that load data ===== -->
+<template id="screen-home" data-title="Beranda" data-api="GET /accounts/summary">
+  <section class="ad-screen" data-screen="home">
+    <div class="ad-status"></div>
+    <div class="nav-bar"><span class="title">Beranda</span></div>
+    <div class="ad-body stack gap-6">
+      <div data-state="loading"><div class="skeleton" style="height:120px"></div></div>
+      <div data-state="empty" class="empty"><div class="ic"><i class="ph ph-wallet"></i></div><div class="t-h-5">Belum ada rekening</div><p class="muted">Buka rekening pertamamu dalam 3 menit.</p><button class="btn btn-primary" data-go="open-account">Buka rekening</button></div>
+      <div data-state="error" class="alert error"><i class="ph ph-warning-circle"></i><div class="stack gap-1"><b>Gagal memuat saldo</b><span>Periksa koneksi lalu coba lagi.</span><button class="btn btn-ghost btn-sm" data-retry>Coba lagi</button></div></div>
+      <div data-state="default" class="card tint stack gap-2"><span class="muted">Total saldo</span><div class="hero-amount num"><span class="cur">Rp</span><span data-bind="balance"></span></div></div>
+    </div>
+  </section>
+</template>
+
+<script>
+// ===== mock data from the API contract (Pandu: realistic Indonesian data, formats from the API schema) =====
+const MOCK = {
+  'GET /accounts/summary': { default: { balance: 12450750 }, empty: { balance: null }, error: { status: 503, code: 'SERVICE_UNAVAILABLE' } },
+};
+const SCREENS = ['home'];                         // order = happy path
+const fmtIDR = n => n == null ? '' : n.toLocaleString('id-ID');
+const BINDERS = { balance: d => fmtIDR(d.balance) };
+// ===== router: #/<screen>?state=<default|loading|empty|error|...> =====
+function parse() { const [path, q] = location.hash.replace(/^#\/?/, '').split('?'); return { screen: path || SCREENS[0], state: new URLSearchParams(q || '').get('state') || 'auto' }; }
+async function render() {
+  const { screen, state } = parse(); const tpl = document.getElementById('screen-' + screen); if (!tpl) return;
+  const dev = document.getElementById('device'); dev.innerHTML = ''; dev.appendChild(tpl.content.cloneNode(true)); document.title = tpl.dataset.title;
+  const api = tpl.dataset.api; let st = state;
+  const show = s => dev.querySelectorAll('[data-state]').forEach(el => el.hidden = el.dataset.state !== s);
+  if (api) { if (st === 'auto') { show('loading'); await new Promise(r => setTimeout(r, 700)); const r = MOCK[api]; st = r.default && r.default.balance === null ? 'empty' : 'default'; }
+    else show(st); const data = (MOCK[api] || {})[st] || (MOCK[api] || {}).default || {}; dev.querySelectorAll('[data-bind]').forEach(el => { const f = BINDERS[el.dataset.bind]; if (f) el.textContent = f(data); }); }
+  show(st === 'auto' ? 'default' : st);
+  dev.querySelectorAll('[data-go]').forEach(b => b.onclick = () => (location.hash = '#/' + b.dataset.go));
+  dev.querySelectorAll('[data-back]').forEach(b => b.onclick = () => history.back());
+  dev.querySelectorAll('[data-retry]').forEach(b => b.onclick = () => (location.hash = '#/' + screen + '?state=auto'));
+  dev.querySelectorAll('[data-sheet]').forEach(b => b.onclick = () => dev.querySelector(b.dataset.sheet).classList.add('open'));
+  dev.querySelectorAll('.scrim').forEach(s => s.onclick = () => s.parentElement.classList.remove('open'));
+  const bar = document.getElementById('bar'); bar.innerHTML = [...new Set([...dev.querySelectorAll('[data-state]')].map(e => e.dataset.state))].map(s => `<button class="chip" onclick="location.hash='#/${screen}?state=${s}'">${s}</button>`).join('');
+}
+const DEVICES = ['phone', 'landscape', 'fold-cover', 'fold-inner', 'fold-inner-landscape', 'flip', 'duo-split'];
+const setDevice = d => { document.body.dataset.device = d; try { localStorage.setItem('proto-device', d); } catch (e) {} };
+try { const p = new URLSearchParams(location.search).get('device') || localStorage.getItem('proto-device'); if (p) setDevice(p); } catch (e) {}
+addEventListener('keydown', e => { if (e.key === 'd' && !/input|textarea/i.test(e.target.tagName)) setDevice(DEVICES[(DEVICES.indexOf(document.body.dataset.device) + 1) % DEVICES.length]);
+  if (e.key === 't' && !/input|textarea/i.test(e.target.tagName)) document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; });
+addEventListener('hashchange', render); addEventListener('keydown', e => { if (e.key === 's' && !/input|textarea/i.test(e.target.tagName)) document.body.classList.toggle('show-states'); });
+render();
+</script></body></html>
