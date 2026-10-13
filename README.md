@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/banner.png" alt="Agentic Designer — a design studio of Claude Code agents" width="100%"></p>
+<p align="center"><img src="docs/assets/banner.png" alt="Agentic Designer: a design studio of Claude Code agents" width="100%"></p>
 
 <p align="center">
   <img alt="version" src="https://img.shields.io/badge/version-1.0.0-8b7cf6">
@@ -9,21 +9,21 @@
 
 **Agentic Designer** turns Claude Code into a small product-design studio. You brief it like a design lead; **Jarvis**, a
 senior product-designer agent, plans in a few lines, builds real screens in Figma with *your* design system, looks at what it
-built, polishes it, and checks it with a lint script — then a separate critic reviews it with fresh eyes.
+built, polishes it, and checks it with a lint script, then a separate critic reviews it with fresh eyes.
 
 
 ## What it does
-- **Designs and builds in Figma** — real components and tokens from your DS, any industry and visual style, phones,
+- **Designs and builds in Figma**: real components and tokens from your DS, any industry and visual style, phones,
   tablets, web, foldables (Fold/Flip) and dual-screen devices in portrait and landscape, with min/max-width specs for devs.
-- **Explores** — `/explore` builds three genuinely different directions (safe · strong · bold), never three recolors.
-- **Reviews itself honestly** — Fresh Eyes sees only screenshots, your taste file and a rubric; a pixel-diff mode checks small edits.
-- **Remembers your design system** — `/add-ds` reads it once (tokens per brand × theme, sizes, fonts, component keys); after
+- **Explores**: `/explore` builds three genuinely different directions (safe · strong · bold), never three recolors.
+- **Reviews itself honestly**: Fresh Eyes sees only screenshots, your taste file and a rubric; a pixel-diff mode checks small edits.
+- **Remembers your design system**: `/add-ds` reads it once (tokens per brand × theme, sizes, fonts, component keys); after
   that agents stop re-querying Figma. `/new-brand` and `/optimize-brand` manage brand modes safely (preview → dry run → one mode).
-- **Prototypes** — interactive HTML with a device viewer (phone, landscape, foldable, dual-screen) or clickable Figma flows.
-- **Motion** — Figma Smart Animate, **Lottie JSON**, or a dev spec (durations, easings) from your motion tokens.
-- **Writes the documents** — PRDs and change summaries in a fixed, reviewable format.
-- **Keeps the canvas clean** — no notes or annotations in your files; explanations stay in chat.
-- **Shows its work** — a live 3D office where you can watch the agents walk to their desks, grab skills, and hand off.
+- **Prototypes**: interactive HTML with a device viewer (phone, landscape, foldable, dual-screen) or clickable Figma flows.
+- **Motion**: Figma Smart Animate, **Lottie JSON**, or a dev spec (durations, easings) from your motion tokens.
+- **Writes the documents**: PRDs and change summaries in a fixed, reviewable format.
+- **Keeps the canvas clean**: no notes or annotations in your files; explanations stay in chat.
+- **Shows its work**: a live 3D office where you can watch the agents walk to their desks, grab skills, and hand off.
 
 ## How it works
 ```mermaid
@@ -40,7 +40,7 @@ flowchart LR
 
 | Agent | Role | Model |
 |---|---|---|
-| **Jarvis** | Lead product designer — plans, builds, polishes in Figma | Opus |
+| **Jarvis** | Lead product designer, plans, builds, polishes in Figma | Opus |
 | **Fresh Eyes** | Independent visual critic (screenshots + taste + rubric only) | Sonnet |
 | **Pandu** | Prototypes (HTML / Figma), motion, Lottie | Opus |
 | **Desi** | Design systems, brand modes, DS change proposals | Opus |
@@ -62,12 +62,12 @@ flowchart LR
 Requirements: [Claude Code](https://docs.claude.com/en/docs/claude-code/overview), the **Figma MCP** connected (Full seat for
 editing), Node.js 18+ (for scripts and the office).
 
-**Option A — from GitHub (auto-updates):**
+**Option A, from GitHub (auto-updates):**
 ```bash
 claude plugin marketplace add https://github.com/reyhan-ak-design/agentic-designer.git
 claude plugin install agentic-designer@agentic-designer-marketplace --scope project
 ```
-**Option B — Claude desktop app:** download `agentic-designer-personal-plugin-v1.0.0.zip` from Releases →
+**Option B, Claude desktop app:** download `agentic-designer-personal-plugin-v1.0.0.zip` from Releases →
 **Customize → Plugins → + → Upload plugin**.
 
 Then, in your design workspace: `/init` → `/doctor` → `/add-ds <your Figma DS link>` (or try the built-in demo DS) → brief Jarvis.
@@ -88,10 +88,10 @@ Then, in your design workspace: `/init` → `/doctor` → `/add-ds <your Figma D
 
 ## Example briefs
 ```
-/explore Home for a crypto app "Kora", iOS 390×844 — feel: confident, premium, calm. Default only.
-/fold home.wallet.default — Galaxy Z Fold cover + inner, portrait and landscape
+/explore Home for a crypto app "Kora", iOS 390×844, feel: confident, premium, calm. Default only.
+/fold home.wallet.default, Galaxy Z Fold cover + inner, portrait and landscape
 /new-brand Acme Pay
-/prototype Top-up flow: pick amount, choose VA or QRIS, PIN, success/failed — HTML + foldable
+/prototype Top-up flow: pick amount, choose VA or QRIS, PIN, success/failed, HTML + foldable
 ```
 
 ## Quality & safety
