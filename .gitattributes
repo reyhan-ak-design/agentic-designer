@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+plugins/agentic-designer/office/public/*.html linguist-vendored
+plugins/agentic-designer/skills/**/*.html linguist-vendored
