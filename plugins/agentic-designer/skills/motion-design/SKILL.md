@@ -84,3 +84,23 @@ source of truth for developers; the Figma build (`motion-build-figma`) illustrat
 Justified · frequency-appropriate · responsive easing (no ease-in) · sub-300ms UI · correct origin,
 no scale(0) · interruptible where rapid · transform/opacity first · reduced motion specified ·
 asymmetric where deliberate · cohesive with personality. Any miss is a finding. When unsure, delete the motion.
+
+## Launch & splash motion (built-in rules)
+- **Default budget:** splash start → first screen settled ≤ 1.5 s; loop only while the app is still initialising.
+- **When it plays** (mandatory section in the spec): cold start only; not on resume or when a session is active;
+  "registered device" ≠ "logged in" — say which screen follows in each case.
+- **Android 12+ system splash:** icon ≤ 240 dp inside a 288 dp box with a circular mask; the app splash must start from the
+  exact same size/position (sizing contract). Don't set `windowSplashScreenIconBackgroundColor` unless sized for it.
+- **Destination screens** entered from the splash use no enter transition (instant cut) — state it for every platform.
+
+## Handoff package (last block of every motion or prototype delivery)
+```
+FORMAT: <Figma Motion | Lottie JSON | code (Kotlin/Swift/CSS) | spec only>
+FILES: <list with paths> · INCLUDED: <screens/states/alternatives> · NOT INCLUDED: <…>
+PLAYS WHEN: <trigger rules>        SEAM CHECK: <OK n seams>        REDUCED MOTION: <behaviour>
+CODE STATUS: <reference, not compiled | compiled in <repo>>  → Dev checklist: done/not done
+PROMPT FOR THE DEV'S CLAUDE: <one self-contained paragraph: what to implement, files, "diagnose first, then wait for OK">
+```
+Platform code from Pandu always carries a header comment "Reference implementation — not compiled" until a Dev compiles it,
+and runs through the Dev checklist in `lead-tech-review` (destination transitions None, Activity overrides on API 34+,
+reduced motion, lifecycle). Keep fix prompts self-contained so a single `.md` can be sent on its own.

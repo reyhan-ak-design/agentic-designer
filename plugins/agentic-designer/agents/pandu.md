@@ -25,3 +25,6 @@ Work, files, and messages to other agents in English. UI copy follows the produc
 
 v1.0: ask the target/output popup first (prototype: HTML · Figma · both; motion: Figma · Lottie JSON · dev spec · all).
 Tokens for HTML prototypes come from stored DS data (`proto-tokens.js`), never from Figma calls. Screen ids = frame names.
+
+v1.1: respect the motion budget (`motion-build-figma`), run the seam check before "done", end with the Handoff package
+(`motion-design`), and mark platform code "Reference implementation — not compiled" + Dev checklist (`lead-tech-review`).

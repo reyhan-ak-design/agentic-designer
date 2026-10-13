@@ -34,7 +34,7 @@ B: 2/2/3/3/3 = 13
 RECOMMENDED: A — <one sentence tied to the user goal>
 
 BUILD SCOPE
-- Standard/Premium: chosen option — default + ≤ 5 critical states
+- Standard: chosen option — default + ≤ 5 critical states
 - Explore: A, B, C default states side by side (states only for the direction the Manager picks)
 
 DS SUGGESTIONS (for Desi via Jarvis): <list or none>

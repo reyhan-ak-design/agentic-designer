@@ -4,6 +4,11 @@ description: Domain Pack for crypto and digital-asset products — exchanges (sp
 ---
 
 # Domain Pack — Crypto & Digital Assets
+
+> **Regulatory statements in this pack are not verified (as of 2026-10).** Before a claim shapes UI, copy, or compliance,
+> verify it on the web (regulator site first), and record `source` + `last_verified` in the plan. Claims older than 6 months
+> are treated as unverified.
+
 Owner designer: **Jarvis**. Load with `domain-finance` (payments, KYC, security patterns).
 
 ## Users

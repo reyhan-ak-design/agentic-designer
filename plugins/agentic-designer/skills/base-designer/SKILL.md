@@ -1,6 +1,6 @@
 ---
 name: base-designer
-description: Team mechanics for Agentic Designer design work — work lanes (Fast/Standard/Premium/Explore), brief and plan formats, handoff format, file locations, the designer's own build-and-polish loop, and the English-internal working language. Used by designers (plan, build, polish), and Pram (brief format). Use whenever a design task is planned, built, handed off, or revised.
+description: Team mechanics for Agentic Designer design work — work lanes (Quick/Standard/Explore/Flow/DS Maintenance — defined in jarvis-studio), brief and plan formats, handoff format, file locations, the designer's own build-and-polish loop, and the English-internal working language. Used by designers (plan, build, polish), and Pram (brief format). Use whenever a design task is planned, built, handed off, or revised.
 ---
 
 # Base Designer — team mechanics

@@ -82,7 +82,7 @@ Judgment items. In the **Explore** lane, layout/spacing/hierarchy items are advi
 - O-02 [J][Major] — Technical risks raised by the dev agent (Dev) are addressed or listed as open.
 - O-03 [J][Minor] — Interactions that are not obvious from static frames (keypad behavior, sheet open, schedule toggle) are annotated.
 
-## P. Rhythm & readability (from `layout-and-spacing`; added v0.2.0)
+## P. Rhythm & readability (from `layout-and-spacing`)
 - P-14 [J][Blocker] — Blur-test top 3 = priority guide top 3.
 - P-15 [J][Major] — Emphasis budget respected (1 hero, 1 primary action, ≤ 3 secondary).
 - P-16 [J][Major] — Worst-case data and all states designed.

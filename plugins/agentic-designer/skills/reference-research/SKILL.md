@@ -1,12 +1,12 @@
 ---
 name: reference-research
-description: Procedure for references in every plan — the median of real shipped apps (Mobbin) as the usability FLOOR, plus one best-in-class hero reference and a 3-reference mood board (Dribbble, Behance, Awwwards, award-winning apps, the Manager's references) as the quality CEILING. Search by job, extract decisions and visual moves, never copy. 2 searches in Fast/Standard, 4 in Premium/Explore. Use in every designer plan run, and by Jarvis when a critique needs evidence of an established pattern.
+description: Procedure for references in every plan — the median of real shipped apps (Mobbin) as the usability FLOOR, plus one best-in-class hero reference and a 3-reference mood board (Dribbble, Behance, Awwwards, award-winning apps, the Manager's references) as the quality CEILING. Search by job, extract decisions and visual moves, never copy. 2 searches in Quick/Standard, 4 in Explore. Use in every designer plan run, and by Jarvis when a critique needs evidence of an established pattern.
 ---
 
 # Reference Research (Mobbin)
 
 ## Budget
-- Fast/Standard: max **2 searches**; Premium/Explore: max **4** (Mobbin + web for Dribbble/Behance/Awwwards). `limit` ≤ 12 each.
+- Quick/Standard: max **2 searches**; Explore: max **4** (Mobbin + web for Dribbble/Behance/Awwwards). `limit` ≤ 12 each.
 - The Manager's references in the brief come first and count as the hero reference when given. Prefer `mode: "standard"` unless the query is nuanced.
 - Set `output_destination: "design_tool"`, `output_tool: "Figma"`, and a stable `task_intent`.
 - If Mobbin is unavailable, write "No reference run" in the plan and rely on the Domain Pack patterns.

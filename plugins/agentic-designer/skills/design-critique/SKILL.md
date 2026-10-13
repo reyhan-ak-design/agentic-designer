@@ -1,6 +1,6 @@
 ---
 name: design-critique
-description: Jarvis's lead-level design critique method — objective-first review, blur test against the priority guide, "what works" preservation, severity-rated findings (Nielsen 0–4) with exact token-level fixes and verification, fix-verb vocabulary, SHIP/REVISE/RETHINK verdicts, bounded revision rounds, independent rating with the lint, and the definition of done before anything reaches the Manager. Use for every plan review and every design review Jarvis performs, and whenever someone asks for a critique, review, feedback, or "is this ready".
+description: (Agentic Designer tasks only — not the general design:design-critique.) Jarvis's lead-level design critique method — objective-first review, blur test against the priority guide, "what works" preservation, severity-rated findings (Nielsen 0–4) with exact token-level fixes and verification, fix-verb vocabulary, SHIP/REVISE/RETHINK verdicts, bounded revision rounds, independent rating with the lint, and the definition of done before anything reaches the Manager. Use for every plan review and every design review Jarvis performs, and whenever someone asks for a critique, review, feedback, or "is this ready".
 ---
 
 # Design Critique (Jarvis)
@@ -28,7 +28,7 @@ precise enough that the designer can fix everything in one round.
 ## Review protocol (in this order — stop as soon as a step decides)
 1. **Lint gate (cheap):** read the `kiki-lint.js` result from the handoff. Any blocker → send back to the designer
    with the list. No visual critique, no screenshots, no Opus reasoning spent on mechanics.
-2. **Point of View first (Explore/Premium):** blur test, then ask "is there one thing here someone would remember
+2. **Point of View first (Standard/Explore):** blur test, then ask "is there one thing here someone would remember
    tomorrow?" and "does it reach the hero reference's ambition?" Score both (rubric below) before judging tidiness.
 3. **Pairwise vs golden screen:** look at the golden screen named in the plan (`_ds/<ds>/golden.md`) and the
    new screen. Ask: *"Which would I ship to this client for this job, and what exactly is the gap?"*
@@ -36,14 +36,14 @@ precise enough that the designer can fix everything in one round.
    "no reliable preference" and rely on the rubric.
 4. **Rubric with few-shot calibration:** before scoring, read 2–3 past approved critiques for the same pattern
    from `agentic-designer-work/_team/critique-bank/<pattern>.md`; score like them.
-5. **Stop rules:** Fast/Standard → at most **1** revision round; Premium/Explore → at most **2**. Revise only for
+5. **Stop rules:** Quick/Standard → at most **1** revision round; Explore → at most **2**. Revise only for
    severity ≥ 3 or a lost pairwise comparison; everything else is noted for the future, not iterated now.
 6. **Bank it:** after the Manager approves, append the final critique (pattern, 5–10 lines, node link) to the
    critique bank so future reviews calibrate against it.
 
 ## Screenshot budget
 Max 2 screenshots per round by default (default + hardest state), `maxDimension` 1024; crop by node for detail
-checks. Premium lane may use up to 4.
+checks. Explore may use up to 4.
 Reviews live in chat/files only — never build review pages or annotation cards in Figma unless asked.
 
 ## Taste delta (mandatory)
@@ -54,7 +54,7 @@ say why it already holds up.
 ## Quality rubric (score 1–5 each)
 Hierarchy · Visual craft · States completeness · DS fidelity · Tech feasibility · Taste-profile fit ·
 **Point of View / memorability** (one ownable idea, visible in the blur test) · **Visual ambition vs hero reference**.
-**Ship only if the average ≥ 4 and no dimension < 3.** Explore and Premium also require **Point of View ≥ 4 and
+**Ship only if the average ≥ 4 and no dimension < 3.** Explore also requires **Point of View ≥ 4 and
 Visual ambition ≥ 4** — "tidy but forgettable" is REVISE, not SHIP.
 
 ## Blur test

@@ -4,6 +4,11 @@ description: Domain Pack for finance products — banking, digital banks, e-wall
 ---
 
 # Domain Pack — Finance
+
+> **Regulatory statements in this pack are not verified (as of 2026-10).** Before a claim shapes UI, copy, or compliance,
+> verify it on the web (regulator site first), and record `source` + `last_verified` in the plan. Claims older than 6 months
+> are treated as unverified.
+
 Deep sub-domain patterns: `references/fintech-patterns.md` (load the section you need).
 Crypto / digital assets: `domain-crypto`.
 

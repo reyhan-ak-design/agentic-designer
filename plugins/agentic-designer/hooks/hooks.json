@@ -5,6 +5,11 @@
         "hooks": [
           {
             "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/preflight.sh\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
             "command": "node \"${CLAUDE_PLUGIN_ROOT}/office/emit.js\"",
             "timeout": 5
           },

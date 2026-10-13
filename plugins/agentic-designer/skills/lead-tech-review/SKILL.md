@@ -1,6 +1,6 @@
 ---
 name: lead-tech-review
-description: Jarvis's engineering lens for design review — platform-native fit (iOS HIG, Material 3, web), how Figma auto layout maps to SwiftUI/Compose/flexbox, responsive and dynamic-type behavior, API/data states, performance and payload cost of the UI, accessibility at implementation level, localization expansion, and handoff readiness for developers. Use in every Jarvis design review and plan review, and to decide whether a dev advisor (Dev/Dev/Dev) is really needed.
+description: Jarvis's engineering lens for design review — platform-native fit (iOS HIG, Material 3, web), how Figma auto layout maps to SwiftUI/Compose/flexbox, responsive and dynamic-type behavior, API/data states, performance and payload cost of the UI, accessibility at implementation level, localization expansion, and handoff readiness for developers. Use in every Jarvis design review and plan review, and to decide whether a dev advisor (iOS, Android, or Web) is really needed.
 ---
 
 # Lead Tech Review (Jarvis)
@@ -44,3 +44,11 @@ Only when the design depends on: a custom native control, real-time data, platfo
 NFC, camera, widgets), unusual gesture behavior, or a performance-sensitive list. Batch one question set.
 
 Report technical findings inside the critique as category `Tech` with the same severity scale.
+
+## Motion & platform code checklist (Pandu hand-offs)
+- Destination screens entered from a splash/animated screen: enter transition = None/Instant (Android: Navigation/Compose
+  `enterTransition`, Activity `overridePendingTransition`/`overrideActivityTransition` on API 34+; iOS: no push animation).
+- System splash ↔ app splash sizes match (Android 12+: 240 dp icon in 288 dp box); no flash of window background.
+- Reduced motion respected (Android `ANIMATOR_DURATION_SCALE`, iOS `isReduceMotionEnabled`, web `prefers-reduced-motion`).
+- Lifecycle: animation stops on background; no replay on configuration change; runs only on cold start when specified.
+- Code marked "not compiled" stays a reference until compiled in the real repo.

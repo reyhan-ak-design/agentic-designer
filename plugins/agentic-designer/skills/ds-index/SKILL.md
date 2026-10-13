@@ -10,6 +10,7 @@ Only search Figma for things the index does not cover.
 
 | Design system | Index file | Figma file key |
 |---|---|---|
+| design system (default) | `ds-knowledge` skill (stored snapshot — never re-index) | see `ds-knowledge/references/00-README.md` |
 | Any other DS the Manager links | `agentic-designer-work/_ds/index/<ds-slug>.md` (built by Desi) | from the link |
 
 Which DS a project uses is recorded in its `PROJECT.md`. If a project names a DS that has no index yet,

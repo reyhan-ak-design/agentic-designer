@@ -38,5 +38,10 @@ t('pixel-diff', () => { const a = path.join(tmp, 'a.png'), b = path.join(tmp, 'b
 const NAME_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*(?:\.[a-z0-9]+(?:-[a-z0-9]+)*){2,4}$/;
 t('naming grammar', () => { for (const g of ['home.wallet.default', 'connect.osl.rejected.alt', 'home.wallet.default.alt.fold-inner', 'ekyc.ktp.in-review']) ok(NAME_RE.test(g), g);
   for (const b of ['Home', 'home.wallet', 'home_wallet_default', '.template.home.x', 'home.wallet.default.alt.fold.extra', 'Home.Wallet.Default']) ok(!NAME_RE.test(b), b); });
+t('preflight.sh syntax + output', () => { const pf = path.join(P, 'hooks/preflight.sh'); execFileSync('sh', ['-n', pf]); const ws = path.join(tmp, 'ws'); fs.mkdirSync(ws);
+  const o = execFileSync('sh', [pf], { encoding: 'utf8', env: { ...process.env, CLAUDE_PLUGIN_ROOT: P, CLAUDE_PROJECT_DIR: ws } }); const j = JSON.parse(o);
+  ok(/aktif/.test(j.systemMessage) && fs.existsSync(path.join(ws, 'agentic-designer-work/_team/lessons.md')) && fs.existsSync(path.join(ws, 'agentic-designer-work/_ds/gaps.md'))); });
+t('hooks run preflight first', () => ok(JSON.parse(fs.readFileSync(path.join(P, 'hooks/hooks.json'), 'utf8')).hooks.SessionStart[0].hooks[0].command.includes('preflight.sh')));
+t('one lane enum (no Premium/Fast lanes)', () => { for (const f of files.filter(f => /SKILL\.md$|references[\\/].*\.md$/.test(f) && !/style-|domain-insurance/.test(f))) ok(!/\b(Premium|Fast)\/|\/(Premium|Fast)\b|Premium lane|Fast lane/.test(fs.readFileSync(f, 'utf8')), path.relative(P, f)); });
 fs.rmSync(tmp, { recursive: true, force: true });
 console.log(`\n${pass} passed, ${fail} failed`); process.exit(fail ? 1 : 0);

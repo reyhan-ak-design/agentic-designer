@@ -42,3 +42,17 @@ description: How Pandu builds and verifies motion in Figma with Figma Motion via
 
 ## Handoff
 Link each scenario frame from the motion spec and list node IDs. Jarvis reviews spec + frames.
+
+## Budget (v1.1 — from a 95M-token splash run)
+Per alternative: ≤ 25 `use_figma` calls · ≤ 8 `export_video` · ≤ 6 screenshots · ≤ 3 spec revisions before a checkpoint.
+Write the spec to disk after every revision (`motion/<flow>/SPEC.md`). After 5 SendMessage continuations, or when switching to
+another alternative, stop: summarise to a handoff file and let Jarvis spawn a **fresh** Pandu with that file (cheap context).
+Two alternatives = two separate runs, never one long conversation.
+
+## Seam check (mandatory before "done")
+Every navigation into or out of an animated screen (splash → login, sheet → screen, success → home):
+1. Export/screenshot the **last frame** of the source and the **first frame** of the destination at the same size.
+2. `node skills/fresh-eyes-review/scripts/pixel-diff.mjs last.png first.png` — the changed box must be only what is meant to
+   change; no white/blank frame, no flash, no push/slide unless designed.
+3. In the prototype, the destination's transition is **Instant** unless the spec says otherwise.
+Report "Seam check: OK (n seams)" in the handoff. A failed seam is a blocker, never a note.

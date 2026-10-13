@@ -1,4 +1,4 @@
-// the lint lint v2 — deterministic, READ-ONLY. Returns violations only (never node trees).
+// kiki-lint v5 — deterministic, READ-ONLY. Returns violations only (never node trees).
 // Set FRAME_IDS (preferred) and optional MANIFEST numbers. Run once per build with use_figma.
 const FRAME_IDS = [];                       // e.g. ["51:3948"]
 const SPACING_SCALE = [0, 2, 4, 8, 12, 16, 20, 24, 32, 36, 40, 48, 56, 64, 80, 96, 120, 160];
@@ -7,23 +7,25 @@ const PLATFORM = 'mobile';                  // 'mobile' (min target 44) | 'andro
 const MAX_DISTINCT_GAPS = 6, MAX_FONT_SIZES = 4, MAX_WEIGHTS = 3;
 const NAME_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*(?:\.[a-z0-9]+(?:-[a-z0-9]+)*){2,4}$/;   // flow.context.state[.variant][.device], ≤ 48 chars
 const NOTE_NAME = /^(notes|design notes|annotations?|ds ?gaps?|review( notes)?|specs?|spec sheet|catatan desain|keterangan)$/i;
-const LANE = 'standard';
+const LANE = 'standard';                    // 'explore' → only a11y + token binding + canvas notes can FAIL
 const TOKENS = 'required';                  // 'waived' for tests without a DS: binding/style checks become advisory
+const DOMAIN = null;                        // 'crypto' | 'finance' | null — domain presets (crypto: asset names are not currency)
 const CURRENCY = 'IDR';                     // expected currency in the UI ('IDR' flags $/USD; null to skip)
-const ADAPTIVE = false;                     // true: images/illustrations/cards/text blocks should carry maxWidth                    // 'explore' → only a11y + token binding + canvas notes can FAIL
+const ADAPTIVE = false;                     // true: images/illustrations/cards/text blocks should carry maxWidth
 const out = [];
 const minTarget = PLATFORM === 'android' ? 48 : PLATFORM === 'web' ? 24 : 44;
 const lum = c => { const f = v => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)); return 0.2126 * f(c.r) + 0.7152 * f(c.g) + 0.0722 * f(c.b); };
 const ratio = (a, b) => { const L1 = lum(a), L2 = lum(b); return (Math.max(L1, L2) + 0.05) / (Math.min(L1, L2) + 0.05); };
 const solid = n => { const f = Array.isArray(n.fills) ? n.fills.find(p => p.type === 'SOLID' && p.visible !== false && (p.opacity ?? 1) > 0.5) : null; return f ? f.color : null; };
-function bgOf(n) { let p = n.parent; while (p && p.type !== 'PAGE') { const c = 'fills' in p ? solid(p) : null; if (c) return c; p = p.parent; } return { r: 1, g: 1, b: 1 }; }
+function bgOf(n) { let p = n.parent; while (p && p.type !== 'PAGE') { if ('fills' in p && Array.isArray(p.fills)) { const g = p.fills.find(f => f.visible !== false && /GRADIENT/.test(f.type));
+      if (g) return { gradient: g.gradientStops.map(s => s.color) }; const c = solid(p); if (c) return c; } p = p.parent; } return { r: 1, g: 1, b: 1 }; }
 const bound = (n, k) => !!(n.boundVariables && n.boundVariables[k]);
 const paintBound = n => Array.isArray(n.fills) && n.fills.every(p => p.type !== 'SOLID' || (p.boundVariables && p.boundVariables.color)) || (n.fillStyleId && n.fillStyleId !== '');
 const isInsideInstance = n => { let p = n.parent; while (p && p.type !== 'PAGE') { if (p.type === 'SLOT') return false; if (p.type === 'INSTANCE') return true; p = p.parent; } return false; };   // content placed in a SLOT is the designer's own
 for (const id of FRAME_IDS) {
   const frame = await figma.getNodeByIdAsync(id); if (!frame) { out.push({ frame: id, error: 'not found' }); continue; }
   // NOTE: do NOT call page.loadAsync() here — it can reset instance sublayers and truncate traversal.
-  const v = { frame: frame.name, id, dsIssues: [], badName: [], tabBarOverlap: [], timeMismatch: [], chartLabelOverlap: [], currency: [], missingMaxWidth: [], unboundFill: [], textNoStyle: [], offScaleGap: [], offScaleRadius: [], clipped: [], contrast: [], smallTarget: [], noAutoLayout: [], fakeComponent: [], canvasNotes: [], glassMisuse: [] };
+  const v = { frame: frame.name, id, dsIssues: [], badName: [], contrastOnGradient: [], tabBarOverlap: [], timeMismatch: [], chartLabelOverlap: [], currency: [], missingMaxWidth: [], unboundFill: [], textNoStyle: [], offScaleGap: [], offScaleRadius: [], clipped: [], contrast: [], smallTarget: [], noAutoLayout: [], fakeComponent: [], canvasNotes: [], glassMisuse: [] };
   const sizes = new Set(), weights = new Set(), gaps = new Set(), edges = new Set(); let frames2 = 0, framesAL = 0, primary = 0;
   let all = frame.findAll(() => true);
   if (all.length < 30) { let pg = frame; while (pg && pg.type !== 'PAGE') pg = pg.parent; if (pg && figma.currentPage !== pg) { await figma.setCurrentPageAsync(pg); all = frame.findAll(() => true); } }
@@ -34,7 +36,8 @@ for (const id of FRAME_IDS) {
     if (n.type === 'TEXT') {
       const fs = n.fontSize, fn = n.fontName; if (own && typeof fs === 'number') sizes.add(fs); if (own && fn && fn !== figma.mixed) weights.add(fn.style);
       if (own && (!n.textStyleId || n.textStyleId === figma.mixed || n.textStyleId === '')) v.textNoStyle.push(`${n.id} "${n.characters.slice(0, 20)}"`);
-      const fg = solid(n); if (fg && typeof fs === 'number') { const r = ratio(fg, bgOf(n)); const need = fs >= 18 || (fs >= 14 && fn && /Bold|Semi/i.test(fn.style)) ? 3 : 4.5; if (r < need) (own ? v.contrast : v.dsIssues).push(`${n.id} "${n.characters.slice(0, 16)}" ${r.toFixed(2)}<${need}${own ? '' : ' (inside DS component → report to Desi)'}`); }
+      const fg = solid(n); const bg = bgOf(n); if (fg && typeof fs === 'number' && bg.gradient) { const r = Math.min(...bg.gradient.map(c => ratio(fg, c))); const need = fs >= 18 || (fs >= 14 && fn && /Bold|Semi/i.test(fn.style)) ? 3 : 4.5; if (r < need) v.contrastOnGradient.push(`${n.id} "${n.characters.slice(0, 16)}" worst stop ${r.toFixed(2)}<${need} (check visually)`); }
+      else if (fg && typeof fs === 'number') { const r = ratio(fg, bg); const need = fs >= 18 || (fs >= 14 && fn && /Bold|Semi/i.test(fn.style)) ? 3 : 4.5; if (r < need) (own ? v.contrast : v.dsIssues).push(`${n.id} "${n.characters.slice(0, 16)}" ${r.toFixed(2)}<${need}${own ? '' : ' (inside DS component → report to Desi)'}`); }
       const tb = n.absoluteBoundingBox; let cp = n.parent; while (cp && cp !== frame && !cp.clipsContent) cp = cp.parent; const cb = cp && cp.absoluteBoundingBox;
       if (tb && cb && (tb.y + tb.height > cb.y + cb.height + 1 || tb.x + tb.width > cb.x + cb.width + 1)) v.clipped.push(`${n.id} "${n.characters.slice(0, 20)}" cut by ${cp.name}`);
       const pb = n.parent && n.parent.absoluteBoundingBox; if (tb && pb && n.parent !== cp && tb.y + tb.height > pb.y + pb.height + 1) v.clipped.push(`${n.id} "${n.characters.slice(0, 20)}" overflows ${n.parent.name}`);
@@ -55,7 +58,7 @@ for (const id of FRAME_IDS) {
         const isQuiet = vals.some(x => /ghost|outline|tertiary|link|text|secondary|subtle/.test(x.split('=')[1] || ''));
         if (isPrimary && !isQuiet) primary++; } }
     if (own && n.type === 'FRAME' && /^(button|input|card|chip|tab|list ?item|toggle)/i.test(n.name)) v.fakeComponent.push(`${n.id} ${n.name} (frame named like a component)`);
-    if (n.type === 'TEXT' && CURRENCY === 'IDR' && /\$\s?\d|\bUSD\b/.test(n.characters)) v.currency.push(`${n.id} "${n.characters.slice(0, 20)}"`);
+    if (n.type === 'TEXT' && CURRENCY === 'IDR' && /\$\s?\d|\bUSD\b/.test(n.characters) && !/USD ?Coin|USDC|USDT|Tether|Dollar Coin|USD1|PYUSD/i.test(n.characters) && !(DOMAIN === 'crypto' && /^[A-Z0-9]{2,6}(\/[A-Z]{2,6})?$/.test(n.characters.trim()))) v.currency.push(`${n.id} "${n.characters.slice(0, 20)}"`);
     if (ADAPTIVE && own && /^(img|image|illustration|hero|card|media|text ?block|body)/i.test(n.name || '') && !(n.maxWidth > 0)) v.missingMaxWidth.push(`${n.id} ${n.name}`);
     if ((!isInsideInstance(n) && NOTE_NAME.test((n.name || '').trim())) || (n.type === 'INSTANCE' && /annotation|sticky ?note/i.test(n.name || ''))) v.canvasNotes.push(`${n.id} ${n.name}`);
     if (PLATFORM !== 'web' && Array.isArray(n.effects) && n.effects.some(e => e.type === 'BACKGROUND_BLUR' && e.visible !== false) && !/nav|tab ?bar|toolbar|header|sheet|bar$/i.test(n.name || '')) v.glassMisuse.push(`${n.id} ${n.name} (glass on content layer)`);

@@ -1,7 +1,7 @@
 <p align="center"><img src="docs/assets/banner.png" alt="Agentic Designer: a design studio of Claude Code agents" width="100%"></p>
 
 <p align="center">
-  <img alt="version" src="https://img.shields.io/badge/version-1.0.0-8b7cf6">
+  <img alt="version" src="https://img.shields.io/badge/version-1.1.0-8b7cf6">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-22c1d6">
   <img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-0b0b12">
   <img alt="Figma" src="https://img.shields.io/badge/works%20in-Figma-f24e1e">
@@ -59,15 +59,16 @@ flowchart LR
 -->
 
 ## Quick start
-Requirements: [Claude Code](https://docs.claude.com/en/docs/claude-code/overview), the **Figma MCP** connected (Full seat for
-editing), Node.js 18+ (for scripts and the office).
+Requirements: [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) or Cowork (plain chat can't run subagents, files or
+scripts), the **Figma MCP** connected (Full seat for editing), and Node.js 18+ (lint, office, scripts). A preflight at session start
+shows the loaded version and warns if Node.js is missing.
 
 **Option A, from GitHub (auto-updates):**
 ```bash
 claude plugin marketplace add https://github.com/reyhan-ak-design/agentic-designer.git
 claude plugin install agentic-designer@agentic-designer-marketplace --scope project
 ```
-**Option B, Claude desktop app:** download `agentic-designer-personal-plugin-v1.0.0.zip` from Releases →
+**Option B, Claude desktop app:** download `agentic-designer-personal-plugin-v1.1.0.zip` from Releases →
 **Customize → Plugins → + → Upload plugin**.
 
 Then, in your design workspace: `/init` → `/doctor` → `/add-ds <your Figma DS link>` (or try the built-in demo DS) → brief Jarvis.

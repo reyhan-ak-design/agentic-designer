@@ -129,7 +129,7 @@ All items are [J]. Default severity Major unless marked.
 - O-02 [J][Major] — Technical risks raised by the dev agent (Dev) are addressed or listed as open.
 - O-03 [J][Minor] — Interactions that are not obvious from static frames (keypad behavior, sheet open, schedule toggle) are annotated.
 
-## P. Rhythm & readability (from `layout-and-spacing`; added v0.2.0)
+## P. Rhythm & readability (from `layout-and-spacing`)
 Mechanical — the lint (run `references/kiki-lint.js` once per page):
 - P-01 [M][Major] — SP1 spacing values bound to `number/Spacing/*` tokens.
 - P-02 [M][Blocker] — SP2 between-group gap ≥ 2× within-group gap; section gap ≥ 1.5× group gap.
@@ -153,6 +153,6 @@ Judgment — Jarvis (`design-critique`):
 - P-18 [J][Major] — No AI tells; brief and DS win over taste.
 - P-19 [J][Major] — Every finding tied to the objective, severity-rated, token-exact fix, verified.
 
-## Severity mapping (v0.2.0)
+## Severity mapping
 Blocker = Sev 3–4 · Major = Sev 2–3 (reviewer decides) · Minor = Sev 1.
 Delivery to the Manager requires: no Sev ≥ 3 open, ≤ 2 Sev 2 open.

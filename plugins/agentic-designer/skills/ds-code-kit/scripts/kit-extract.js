@@ -1,6 +1,6 @@
 // DS Code Kit extractor — READ-ONLY, run in the DESIGN SYSTEM file with use_figma.
 // Resolves REAL VALUES (aliases followed) for one brand mode + one theme mode. Paged to keep responses small.
-const BRAND_MODE = 'Base';       // mode name in the brand collection
+const BRAND_MODE = 'Base';    // mode name in the brand collection (current list: ds-knowledge 02-brand-settings.md)
 const THEME_MODE = 'Light';      // semantic/theme mode (matches 'Light', 'Light Mode', …)
 const PLATFORM_MODE = 'Mobile';  // typography/layout mode (Mobile | Tablet | Desktop)
 const SECTION = 'vars';          // 'vars' | 'styles'

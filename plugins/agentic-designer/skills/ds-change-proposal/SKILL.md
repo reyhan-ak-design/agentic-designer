@@ -19,7 +19,7 @@ Write to `agentic-designer-work/_ds/proposals/<YYYY-MM-DD>-<slug>.md` using
 `references/proposal-format.md`. One proposal = one coherent change.
 
 ## Impact analysis (mandatory)
-- Every brand mode in Brand Settings (every brand mode).
+- Every brand mode in Brand Settings (see `ds-knowledge/references/02-brand-settings.md` for the current list).
 - Light and Dark modes of `03 Semantic`.
 - Components that consume the token (search by bound variable) and screens known to use them.
 - Contrast results for any color change, per brand mode (use `brand-mode/scripts/ramp.py` math).

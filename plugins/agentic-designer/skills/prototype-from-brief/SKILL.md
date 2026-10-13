@@ -40,7 +40,7 @@ motion tokens, starting points per flow named like the flow. Never add notes or 
 - **States per screen:** loading · empty · error per API error code/validation · success · disabled with reason.
 - **Priority guide per screen:** hero, primary action (exactly one), secondaries (≤ 3).
 - Platform (mobile 390 / web 1440), Domain Pack, Style Pack, DS kit path. Missing kit → ask Jarvis to run Desi's `ds-code-kit` first.
-Premium lane or unfamiliar domain → the domain designer writes this frame instead (Opus); Pandu builds.
+Explore lane or unfamiliar domain → Jarvis writes this frame first; Pandu builds.
 
 ## 2. Build (one folder per flow)
 `agentic-designer-work/<project>/prototype/<flow>/` → copy `tokens.css` + `kit.css` from the kit and

@@ -47,7 +47,7 @@ Dark mode: lighter surfaces for higher layers, borders instead of shadows.
 - **Truncation:** only with a way to see the full value; never on money, names on confirmation screens, or error text.
 - **Imagery:** real, illustrated, or generated (`visual-assets`) — never grey placeholder boxes in a final; follow the Style Pack's art direction; images get a hairline outline (black/white at 10%) on light surfaces.
 
-## 6. Signature moment (required in Explore/Premium, expected in Standard)
+## 6. Signature moment (required in Explore, expected in Standard)
 Every screen has **one** considered, ownable idea that makes it memorable and is **visible in the blur test** — a hero
 amount set at display scale, a brand-color field with a bold shape, a striking photo crop, an illustrated empty state, a
 card stack with depth, a micro-interaction handed to Pandu. It uses DS tokens (or a proposed token), serves the objective,

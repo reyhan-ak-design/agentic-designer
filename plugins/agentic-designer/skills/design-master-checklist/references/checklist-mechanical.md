@@ -49,7 +49,7 @@ Checked by `kiki-lint.js`; designers fix what it reports.
 ## O. Handoff readiness
 - O-01 [M][Blocker] — No notes, annotation cards, explanation text, review pages, or DS-gap sections on the canvas. Explanations live in the handoff and Jarvis's chat summary only.
 
-## P. Rhythm & readability (from `layout-and-spacing`; added v0.2.0)
+## P. Rhythm & readability (from `layout-and-spacing`)
 - P-01 [M][Major] — SP1 spacing values bound to `number/Spacing/*` tokens.
 - P-02 [M][Blocker] — SP2 between-group gap ≥ 2× within-group gap; section gap ≥ 1.5× group gap.
 - P-03 [M][Major] — SP3 label closer to its value than to the previous group.

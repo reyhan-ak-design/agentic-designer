@@ -47,7 +47,7 @@ Record property keys verbatim (including `➜ ` prefixes and `#id` suffixes) and
 ## Golden screens (Manager's taste target)
 The Manager may pick golden screens from anywhere (our files, Mobbin, Dribbble, screenshots). Store them in
 `_ds/<ds>/golden/` (image or node link) with 2–3 lines on what makes each excellent. Without golden screens the
-pairwise step cannot run — ask the Manager for 3–6 before the first Explore/Premium task.
+pairwise step cannot run — ask the Manager for 3–6 before the first Explore task.
 
 ## Hygiene (improves search and lint)
 Hide primitives from publishing, scope variables to property types (never ALL_SCOPES), semantic layer names.

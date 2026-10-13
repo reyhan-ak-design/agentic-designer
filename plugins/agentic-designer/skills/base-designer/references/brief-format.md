@@ -18,7 +18,7 @@ Feel         : <3 words, e.g. 'warm, quick, confident'>
 References   : <2–3 links/screenshots the Manager likes> + what to take from each
 Signature    : <idea, or 'designer proposes'>
 Images       : <uploads in _assets/ | Unsplash ok | illustration only | AI generation ok>
-Lane         : <Fast | Standard | Premium | Explore>
+Lane         : <Quick | Standard | Explore | Flow | DS Maintenance>
 Figma target : <file link + page name to work in>
 ```
 

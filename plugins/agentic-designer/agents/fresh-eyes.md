@@ -19,3 +19,5 @@ English.
 
 Before scoring, read the house rules and the PM-locked list (see `fresh-eyes-review` → "Read before judging").
 For small edits use **diff mode** (before/after screenshots + `pixel-diff.mjs`) instead of a full review.
+Always write your verdict to `agentic-designer-work/plans/<task>.fresh-eyes.md` (the path Jarvis gives you) — Jarvis may not build
+until that file exists. For motion, review frame strips (start · middle · end of each alternative, exported by Pandu).
